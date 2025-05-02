@@ -1,156 +1,77 @@
-/* Reset & Base Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guerra Printing</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">Guerra Printing</div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="#">Services</a>
+            <div class="dropdown-content">
+              <div class="dropdown-group">
+                <strong>Printed Materials</strong>
+                <a href="services/business-cards.html">Business Cards</a>
+                <a href="services/flyers.html">Flyers</a>
+                <a href="services/posters-menus.html">Posters / Menus</a>
+                <a href="services/brochures.html">Brochures</a>
+                <a href="services/invoices.html">Invoices</a>
+              </div>
+              <div class="dropdown-group">
+                <strong>Signage & Displays</strong>
+                <a href="services/banners.html">Banners</a>
+                <a href="services/vinyl-letters.html">Vinyl Letters</a>
+                <a href="services/window-perf.html">Window Perf</a>
+                <a href="services/wrap-trucks.html">Wrap Trucks</a>
+              </div>
+              <div class="dropdown-group">
+                <strong>Promotional Items</strong>
+                <a href="services/magnets.html">Magnets</a>
+                <a href="services/stickers.html">Stickers</a>
+              </div>
+              <div class="dropdown-group">
+                <strong>Apparel</strong>
+                <a href="services/t-shirts.html">T-Shirts</a>
+                <a href="services/tshirts-vinyl.html">T-Shirts with Vinyl</a>
+                <a href="services/silk-screen.html">Silk Screen T-Shirts</a>
+                <a href="services/hoodies.html">Hoodies</a>
+                <a href="services/caps.html">Caps</a>
+                <a href="services/embroidery.html">Embroidery</a>
+              </div>
+              <div class="dropdown-group">
+                <strong>Specialty</strong>
+                <a href="services/sublimation.html">Sublimation</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="search-box">
+          <input type="text" placeholder="Search...">
+        </div>
+      </nav>
+    </div>
+  </header>
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
-}
+  <main>
+    <section class="hero">
+      <h1>Welcome to Guerra Printing</h1>
+      <p>High-quality custom printing for your business and personal needs.</p>
+    </section>
+  </main>
 
-header {
-  background-color: #fff;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  background-color: #222;
-  padding: 0.5rem 1rem;
-}
-
-.navbar ul {
-  display: flex;
-  list-style: none;
-  gap: 1rem;
-}
-
-.navbar ul li {
-  position: relative;
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  display: block;
-  transition: background 0.3s ease;
-}
-
-.navbar a:hover {
-  background-color: #444;
-  border-radius: 5px;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #333;
-  min-width: 200px;
-  z-index: 1000;
-  flex-direction: column;
-}
-
-.dropdown-content li a {
-  padding: 0.5rem 1rem;
-}
-
-.dropdown:hover .dropdown-content {
-  display: flex;
-}
-
-.search-bar {
-  padding: 0.5rem;
-  border-radius: 5px;
-  border: none;
-}
-
-main {
-  padding: 2rem;
-}
-
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.slideshow-container {
-  position: relative;
-  max-width: 100%;
-  margin: 1rem auto;
-}
-
-.mySlides {
-  display: none;
-}
-
-.mySlides img {
-  width: 100%;
-}
-
-footer {
-  background-color: #222;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-}
-
-.social-media-links a {
-  color: white;
-  margin: 0 10px;
-  text-decoration: none;
-  font-size: 1.5rem;
-}
-
-.social-media-links a:hover {
-  color: #ccc;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-  .navbar ul {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .navbar {
-    flex-direction: column;
-  }
-
-  .search-bar {
-    width: 100%;
-  }
-}
-Folder Structure:
-Make sure your folder structure looks something like this:
-
-bash
-Copy
-Edit
-/project-directory
-  /images
-    slide1.jpg
-    slide2.jpg
-    slide3.jpg
-  /style.css
-  /slideshow.js
-  /index.html
-  /about.html
-  /contact.html
-  /services.html
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Guerra Printing. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
