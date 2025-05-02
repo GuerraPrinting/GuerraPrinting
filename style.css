@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 
+/* Body */
 body {
   font-family: Arial, sans-serif;
   background-color: #121212;
@@ -16,37 +17,42 @@ body {
 header {
   background-color: #1a1a1a;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  justify-content: space-between;
+  padding: 0.8rem 2rem;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-.logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #fff;
+.logo img {
+  height: 50px;
 }
 
 /* Navigation */
-.navbar > ul {
+.navbar {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.navbar ul {
   list-style: none;
   display: flex;
-  gap: 1.2rem;
+  gap: 1.5rem;
 }
 
 .navbar a {
   color: #f4f4f4;
   text-decoration: none;
-  padding: 0.5rem 0.8rem;
-  transition: background 0.3s ease;
+  padding: 0.5rem 0.75rem;
+  transition: background 0.3s;
 }
 
 .navbar a:hover {
-  background: #333;
-  border-radius: 5px;
+  background-color: #333;
+  border-radius: 4px;
 }
 
 /* Dropdown */
@@ -60,23 +66,13 @@ header {
   top: 100%;
   left: 0;
   background-color: #222;
-  flex-direction: column;
-  min-width: 180px;
-  border-radius: 6px;
-  padding: 0;
-  margin: 0;
+  border-radius: 5px;
+  min-width: 160px;
   z-index: 999;
-}
-
-.dropdown-content ul {
-  display: block;
-  padding: 0;
-  margin: 0;
+  flex-direction: column;
 }
 
 .dropdown-content li {
-  list-style: none;
-  width: 100%;
   border-bottom: 1px solid #333;
 }
 
@@ -84,33 +80,59 @@ header {
   display: block;
   padding: 0.6rem;
   color: #f4f4f4;
-  text-decoration: none;
-  background: transparent;
-}
-
-.dropdown-content li a:hover {
-  background-color: #333;
 }
 
 .dropdown:hover .dropdown-content {
   display: flex;
 }
 
-/* Hero Section */
-.hero {
-  background: url("images/hero.jpg") center/cover no-repeat;
-  height: 90vh;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Search Bar */
+.search-bar {
+  margin-left: 2rem;
 }
 
+.search-bar input {
+  padding: 0.4rem 0.75rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.slide-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+  z-index: 1;
+}
+
+.slide-img.active {
+  display: block;
+}
+
+/* Overlay on Hero */
 .hero-overlay {
+  position: relative;
+  z-index: 2;
   background: rgba(0, 0, 0, 0.6);
-  padding: 2rem;
+  padding: 2rem 3rem;
+  max-width: 700px;
   text-align: center;
   border-radius: 10px;
+  margin: auto;
+  top: 40%;
+  transform: translateY(-50%);
 }
 
 .hero-overlay h1 {
@@ -123,58 +145,27 @@ header {
   color: #ccc;
 }
 
-/* Slideshow */
-.slideshow {
-  position: relative;
-  max-width: 100%;
-  overflow: hidden;
-  margin-top: 2rem;
-}
-
-.slide {
-  display: none;
-  position: relative;
-}
-
-.slide img {
-  width: 100%;
-  height: 370px;
-  object-fit: cover;
-  display: block;
-}
-
-.caption {
-  position: absolute;
-  bottom: 10%;
-  left: 5%;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 0.8rem 1.2rem;
-  border-radius: 5px;
-  font-size: 1.2rem;
-}
-
 /* Services Preview */
 .services-preview {
-  padding: 2rem;
-  background: #1e1e1e;
+  padding: 3rem 2rem;
+  background-color: #1e1e1e;
   text-align: center;
 }
 
 .services-preview h2 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
 }
 
 .service-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
-  padding: 1rem 0;
 }
 
 .service-box {
   background: #2a2a2a;
-  border-radius: 10px;
+  border-radius: 8px;
   padding: 1rem;
   transition: transform 0.3s ease;
 }
@@ -187,11 +178,12 @@ header {
   width: 100%;
   height: 180px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 6px;
 }
 
 .service-box h3 {
-  margin: 1rem 0 0.5rem;
+  margin-top: 1rem;
+  font-size: 1.25rem;
   color: #f9f9f9;
 }
 
@@ -204,7 +196,7 @@ header {
 footer {
   background: #111;
   color: #ccc;
-  padding: 1.5rem 2rem;
+  padding: 2rem;
   text-align: center;
 }
 
