@@ -5,60 +5,97 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Guerra Printing</title>
   <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
 </head>
 <body>
   <header>
-   <div class="logo-center">
-    <img src="logo.jpg" alt="Guerra Printing Logo" />
-    <h1 class="company-name">Guerra Printing</h1>
-</div>
-      <nav class="navbar">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li class="dropdown">
-            <a href="#">Services</a>
-            <div class="dropdown-content">
-              <a href="printed-materials.html">Printed Materials</a>
-              <a href="signage-displays.html">Signage & Displays</a>
-              <a href="promotional-items.html">Promotional Items</a>
-              <a href="apparel.html">Apparel</a>
-              <a href="specialty.html">Specialty</a>
-            </div>
-          </li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-        <div class="search-box">
-          <input type="text" placeholder="Search...">
-        </div>
-      </nav>
+    <div class="logo-center">
+      <img src="logo.jpg" alt="Guerra Printing Logo" />
+      <h1 class="company-name">Guerra Printing</h1>
     </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
-    <section class="hero">
-      <h1>Welcome to Guerra Printing</h1>
-      <p>High-quality custom printing for your business and personal needs.</p>
+    <section class="hero" id="home">
+      <h2>Custom Printing Solutions for Every Need</h2>
     </section>
 
-    <section class="slideshow-container">
-      <div class="slide fade">
-        <img src="slide1.jpg" alt="Slide 1">
+    <section id="services" class="services">
+      <h2>Services</h2>
+
+      <div class="category">
+        <h3>Printed Materials</h3>
+        <ul class="grid">
+          <li>Business Cards</li>
+          <li>Flyers</li>
+          <li>Poster/Menus</li>
+          <li>Brochures</li>
+        </ul>
       </div>
-      <div class="slide fade">
-        <img src="slide2.jpg" alt="Slide 2">
+
+      <div class="category">
+        <h3>Signage & Displays</h3>
+        <ul class="grid">
+          <li>Banners</li>
+          <li>Vinyl Letters</li>
+          <li>Window Perf</li>
+          <li>Wrap Trucks</li>
+        </ul>
       </div>
-      <div class="slide fade">
-        <img src="slide3.jpg" alt="Slide 3">
+
+      <div class="category">
+        <h3>Promotional Items</h3>
+        <ul class="grid">
+          <li>Magnets</li>
+          <li>Stickers</li>
+        </ul>
       </div>
+
+      <div class="category">
+        <h3>Apparel</h3>
+        <ul class="grid">
+          <li>T-Shirts</li>
+          <li>T-Shirts with Vinyl</li>
+          <li>Silk Screen T-Shirts</li>
+          <li>Hoodies</li>
+          <li>Caps</li>
+          <li>Embroidery</li>
+        </ul>
+      </div>
+
+      <div class="category">
+        <h3>Specialty</h3>
+        <ul class="grid">
+          <li>Sublimation</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p>
+        Guerra Printing has been a trusted name in custom printing solutions, dedicated to delivering
+        quality and precision for every project. Our team combines expertise with the latest technology
+        to bring your vision to life.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p><strong>Phone:</strong> 773-457-09288</p>
+      <p><strong>Address:</strong> 2540 W 51st St</p>
     </section>
   </main>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2025 Guerra Printing. All rights reserved.</p>
-    </div>
+    <p>&copy; 2025 Guerra Printing. All rights reserved.</p>
   </footer>
 </body>
 </html>
