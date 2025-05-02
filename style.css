@@ -1,94 +1,97 @@
-/* Reset */
+/* Reset & Base Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Header */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
 header {
-  background-color: #333;
-  color: white;
+  background-color: #fff;
   padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
-/* Navbar */
-.navbar ul {
-  list-style: none;
+.navbar {
   display: flex;
-  gap: 1rem;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #222;
+  padding: 0.5rem 1rem;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.navbar ul li {
+  position: relative;
 }
 
 .navbar a {
   color: white;
   text-decoration: none;
-  padding: 8px 12px;
-  transition: background 0.3s;
+  padding: 0.5rem 1rem;
+  display: block;
+  transition: background 0.3s ease;
 }
 
 .navbar a:hover {
-  background-color: #555;
-  border-radius: 4px;
-}
-
-/* Dropdown */
-.dropdown {
-  position: relative;
+  background-color: #444;
+  border-radius: 5px;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #444;
   top: 100%;
   left: 0;
-  z-index: 999;
-  flex-direction: column;
+  background-color: #333;
   min-width: 200px;
+  z-index: 1000;
+  flex-direction: column;
 }
 
 .dropdown-content li a {
-  display: block;
-  padding: 8px 12px;
-  white-space: nowrap;
+  padding: 0.5rem 1rem;
 }
 
 .dropdown:hover .dropdown-content {
-  display: block;
+  display: flex;
 }
 
-/* Search Bar */
 .search-bar {
-  margin-left: 1rem;
-  padding: 6px 10px;
-  border-radius: 4px;
+  padding: 0.5rem;
+  border-radius: 5px;
   border: none;
 }
 
-/* Responsive Nav Wrap */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+main {
+  padding: 2rem;
+}
 
-  .navbar ul {
-    flex-direction: column;
-    width: 100%;
-  }
+section {
+  margin-bottom: 2rem;
+}
 
-  .search-bar {
-    width: 100%;
-    margin-top: 1rem;
-  }
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
 }
