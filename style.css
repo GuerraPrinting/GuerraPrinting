@@ -68,13 +68,13 @@ header {
   left: 0;
   background-color: #222;
   min-width: 180px;
-  border-radius: 6px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  border-radius: 5px;
   z-index: 999;
-  flex-direction: column;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
 }
 
 .dropdown-content li {
+  list-style: none;
   border-bottom: 1px solid #333;
 }
 
@@ -87,15 +87,17 @@ header {
   padding: 0.7rem 1rem;
   color: #f4f4f4;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .dropdown-content li a:hover {
-  background-color: #444;
+  background-color: #333;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
 
 /* Search Bar */
 .search-bar {
