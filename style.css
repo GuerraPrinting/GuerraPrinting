@@ -1,123 +1,201 @@
-/* Reset some defaults */
-body, h1, h2, h3, p, ul, li {
+/* Reset */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #f4f4f4;
   line-height: 1.6;
-  background-color: #fdfdfd;
-  color: #333;
 }
 
-/* Header and Navigation */
+/* Header */
 header {
-  background-color: #000;
-  padding: 20px 40px;
+  background-color: #1a1a1a;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.logo-center {
-  display: flex;
-  align-items: center;
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
 }
 
-.logo-center img {
-  height: 60px;
-  margin-right: 15px;
-}
-
-.company-name {
-  font-size: 24px;
-  color: #00e0ff;
-}
-
+/* Navigation */
 .navbar ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 1.2rem;
 }
 
 .navbar a {
+  color: #f4f4f4;
   text-decoration: none;
-  color: white;
-  font-weight: bold;
-  transition: color 0.3s ease;
+  padding: 0.5rem 0.8rem;
+  transition: background 0.3s ease;
 }
 
 .navbar a:hover {
-  color: #00e0ff;
+  background: #333;
+  border-radius: 5px;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #222;
+  min-width: 180px;
+  top: 100%;
+  left: 0;
+  border-radius: 6px;
+  z-index: 999;
+}
+
+.dropdown-content li {
+  border-bottom: 1px solid #333;
+}
+
+.dropdown-content li a {
+  display: block;
+  padding: 0.6rem;
+  color: #f4f4f4;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 /* Hero Section */
 .hero {
-  background: url('banner.jpg') no-repeat center center/cover;
-  padding: 100px 20px;
-  text-align: center;
-  color: white;
-  background-color: #000; /* fallback */
-}
-
-.hero h2 {
-  font-size: 2em;
-  color: #fff;
-}
-
-/* Services */
-.services {
-  padding: 60px 20px;
-  text-align: center;
-  background-color: #fff;
-}
-
-.services h2 {
-  font-size: 28px;
-  margin-bottom: 30px;
-}
-
-.category h3 {
-  margin-top: 40px;
-  margin-bottom: 10px;
-  font-size: 22px;
-  color: #000;
-}
-
-.grid {
+  background: url("images/hero.jpg") center/cover no-repeat;
+  height: 90vh;
+  position: relative;
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
 }
 
-.grid li {
-  list-style: none;
-  background-color: #f0f0f0;
-  padding: 10px 20px;
-  border-radius: 6px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  text-align: center;
+  border-radius: 10px;
 }
 
-/* About & Contact Sections */
-#about, #contact {
-  padding: 40px 20px;
-  background-color: #f8f8f8;
+.hero-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-overlay p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+/* Slideshow */
+.slideshow {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+.slide {
+  display: none;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+}
+
+.caption {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0.8rem 1.2rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+/* Services Preview */
+.services-preview {
+  padding: 2rem;
+  background: #1e1e1e;
   text-align: center;
 }
 
-#contact p, #about p {
-  font-size: 16px;
-  margin-bottom: 10px;
+.services-preview h2 {
+  margin-bottom: 1.5rem;
 }
 
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+.service-box {
+  background: #2a2a2a;
+  border-radius: 10px;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.service-box:hover {
+  transform: scale(1.03);
+}
+
+.service-box img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.service-box h3 {
+  margin: 1rem 0 0.5rem;
+  color: #f9f9f9;
+}
+
+.service-box p {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+/* Footer */
 footer {
+  background: #111;
+  color: #ccc;
+  padding: 1.5rem 2rem;
   text-align: center;
-  padding: 20px;
-  background-color: #000;
-  color: white;
+}
+
+footer .social a {
+  color: #ccc;
+  margin: 0 1rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer .social a:hover {
+  color: #fff;
 }
