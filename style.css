@@ -1,61 +1,40 @@
-/* === Base Reset === */
-* {
+/* Reset some defaults */
+body, h1, h2, h3, p, ul, li {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f8f8;
-  color: #333;
+  font-family: 'Segoe UI', sans-serif;
   line-height: 1.6;
+  background-color: #fdfdfd;
+  color: #333;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* === Header === */
+/* Header and Navigation */
 header {
-  background-color: #111;
-  color: #fff;
-  padding: 20px 0;
-  position: relative;
-}
-
-/* === Centered Logo === */
-.logo-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.logo-center img {
-  width: 200px;
-  max-width: 90%;
-  height: auto;
-}
-
-.company-name {
-  font-size: 24px;
-  font-weight: bold;
-  color: #00e5ff;
-  margin-top: 10px;
-  text-align: center;
-}
-
-/* === Navigation === */
-.navbar {
+  background-color: #000;
+  padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 10px;
+}
+
+.logo-center {
+  display: flex;
+  align-items: center;
+}
+
+.logo-center img {
+  height: 60px;
+  margin-right: 15px;
+}
+
+.company-name {
+  font-size: 24px;
+  color: #00e0ff;
 }
 
 .navbar ul {
@@ -65,109 +44,80 @@ header {
 }
 
 .navbar a {
-  color: #fff;
   text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 4px;
-  transition: background 0.3s;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-  background-color: #333;
+  color: #00e0ff;
 }
 
-/* === Dropdown Menu === */
-.dropdown {
-  position: relative;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 40px;
-  left: 0;
-  background-color: #222;
-  padding: 10px 0;
-  border-radius: 4px;
-  min-width: 200px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  z-index: 1000;
-  flex-direction: column;
-}
-
-.dropdown:hover .dropdown-content,
-.dropdown-content:hover {
-  display: flex;
-}
-
-.dropdown-content a {
-  color: #fff;
-  padding: 10px 16px;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-
-.dropdown-content a:hover {
-  background-color: #444;
-}
-
-.search-box input {
-  padding: 6px 10px;
-  border-radius: 4px;
-  border: none;
-  font-size: 14px;
-}
-
-/* === Hero Section === */
+/* Hero Section */
 .hero {
-  background: linear-gradient(to right, #e0e0e0, #ffffff);
+  background: url('banner.jpg') no-repeat center center/cover;
+  padding: 100px 20px;
   text-align: center;
-  padding: 80px 20px;
+  color: white;
+  background-color: #000; /* fallback */
 }
 
-.hero h1 {
-  font-size: 36px;
-  color: #111;
+.hero h2 {
+  font-size: 2em;
+  color: #fff;
+}
+
+/* Services */
+.services {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.services h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.category h3 {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  font-size: 22px;
+  color: #000;
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.grid li {
+  list-style: none;
+  background-color: #f0f0f0;
+  padding: 10px 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* About & Contact Sections */
+#about, #contact {
+  padding: 40px 20px;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+#contact p, #about p {
+  font-size: 16px;
   margin-bottom: 10px;
 }
 
-.hero p {
-  font-size: 18px;
-  color: #555;
-}
-
-/* === Slideshow === */
-.slideshow-container {
-  position: relative;
-  max-width: 1000px;
-  margin: 60px auto;
-}
-
-.slide {
-  display: none;
-}
-
-.slide img {
-  width: 100%;
-  border-radius: 6px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.fade {
-  animation: fadeEffect 1s ease-in-out;
-}
-
-@keyframes fadeEffect {
-  from { opacity: 0.4; }
-  to { opacity: 1; }
-}
-
-/* === Footer === */
 footer {
-  background-color: #111;
-  color: #ccc;
-  padding: 20px 0;
   text-align: center;
-  font-size: 14px;
-  margin-top: 60px;
+  padding: 20px;
+  background-color: #000;
+  color: white;
 }
