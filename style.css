@@ -14,7 +14,7 @@ body {
 header {
   background-color: #fff;
   padding: 1rem 2rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -84,8 +84,23 @@ main {
   padding: 2rem;
 }
 
-section {
-  margin-bottom: 2rem;
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: 1rem auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.mySlides img {
+  width: 100%;
 }
 
 footer {
@@ -95,3 +110,47 @@ footer {
   padding: 1rem;
   margin-top: 2rem;
 }
+
+.social-media-links a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.social-media-links a:hover {
+  color: #ccc;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
+}
+Folder Structure:
+Make sure your folder structure looks something like this:
+
+bash
+Copy
+Edit
+/project-directory
+  /images
+    slide1.jpg
+    slide2.jpg
+    slide3.jpg
+  /style.css
+  /slideshow.js
+  /index.html
+  /about.html
+  /contact.html
+  /services.html
