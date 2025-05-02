@@ -5,72 +5,73 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Guerra Printing</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- FontAwesome for social media icons -->
 </head>
 <body>
   <header>
-    <div class="logo">Guerra Printing</div>
-    <nav class="navbar">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li class="dropdown">
-          <a href="services.html">Services</a>
-          <ul class="dropdown-content">
-            <li><a href="services.html#business-cards">Business Cards</a></li>
-            <li><a href="services.html#flyers">Flyers</a></li>
-            <li><a href="services.html#posters">Posters/Menus</a></li>
-            <li><a href="services.html#invoices">Invoices</a></li>
-            <li><a href="services.html#brochures">Brochures</a></li>
-            <li><a href="services.html#magnets">Magnets</a></li>
-            <li><a href="services.html#stickers">Stickers</a></li>
-            <li><a href="services.html#banners">Banners</a></li>
-            <li><a href="services.html#vinyl-letters">Vinyl Letters</a></li>
-            <li><a href="services.html#window-perf">Window Perf</a></li>
-            <li><a href="services.html#embroidery">Embroidery</a></li>
-            <li><a href="services.html#tshirts">T-Shirts</a></li>
-            <li><a href="services.html#screen-tshirts">Silk Screen T-Shirts</a></li>
-            <li><a href="services.html#vinyl-tshirts">T-Shirts with Vinyl</a></li>
-            <li><a href="services.html#caps">Caps</a></li>
-            <li><a href="services.html#hoodies">Hoodies</a></li>
-            <li><a href="services.html#wrap-trucks">Wrap Trucks</a></li>
-            <li><a href="services.html#sublimation">Sublimation</a></li>
-          </ul>
-        </li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-      <input type="text" placeholder="Search..." class="search-bar" />
-    </nav>
+    <div class="container">
+      <div class="logo">Guerra Printing</div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="#">Services</a>
+            <div class="dropdown-content">
+              <div class="dropdown-group">
+                <strong>Printed Materials</strong>
+                <a href="services/business-cards.html">Business Cards</a>
+                <a href="services/flyers.html">Flyers</a>
+                <a href="services/posters-menus.html">Posters / Menus</a>
+                <a href="services/brochures.html">Brochures</a>
+                <a href="services/invoices.html">Invoices</a>
+              </div>
+              <div class="dropdown-group">
+                <strong>Signage & Displays</strong>
+                <a href="services/banners.html">Banners</a>
+                <a href="services/vinyl-letters.html">Vinyl Letters</a>
+                <a href="services/window-perf.html">Window Perf</a>
+                <a href="services/wrap-trucks.html">Wrap Trucks</a>
+              </div>
+              <div class="dropdown-group">
+                <strong>Promotional Items</strong>
+                <a href="services/magnets.html">Magnets</a>
+                <a href="services/stickers.html">Stickers</a>
+              </div>
+              <div class="dropdown-group">
+                <strong>Apparel</strong>
+                <a href="services/t-shirts.html">T-Shirts</a>
+                <a href="services/tshirts-vinyl.html">T-Shirts with Vinyl</a>
+                <a href="services/silk-screen.html">Silk Screen T-Shirts</a>
+                <a href="services/hoodies.html">Hoodies</a>
+                <a href="services/caps.html">Caps</a>
+                <a href="services/embroidery.html">Embroidery</a>
+              </div>
+              <div class="dropdown-group">
+                <strong>Specialty</strong>
+                <a href="services/sublimation.html">Sublimation</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="search-box">
+          <input type="text" placeholder="Search...">
+        </div>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <h1>Welcome to Guerra Printing</h1>
-    <p>High-quality custom printing services for your business and personal needs.</p>
-
-    <!-- Slideshow Section -->
-    <div class="slideshow-container">
-      <div class="mySlides fade">
-        <img src="images/slide1.jpg" style="width:100%">
-      </div>
-      <div class="mySlides fade">
-        <img src="images/slide2.jpg" style="width:100%">
-      </div>
-      <div class="mySlides fade">
-        <img src="images/slide3.jpg" style="width:100%">
-      </div>
-    </div>
+    <section class="hero">
+      <h1>Welcome to Guerra Printing</h1>
+      <p>High-quality custom printing for your business and personal needs.</p>
+    </section>
   </main>
 
-  <!-- Footer with Social Media Links -->
   <footer>
-    <p>&copy; 2025 Guerra Printing. All rights reserved.</p>
-    <div class="social-media-links">
-      <a href="https://www.tiktok.com/@yourusername" target="_blank"><i class="fab fa-tiktok"></i></a>
-      <a href="https://www.instagram.com/yourusername" target="_blank"><i class="fab fa-instagram"></i></a>
+    <div class="container">
+      <p>&copy; 2025 Guerra Printing. All rights reserved.</p>
     </div>
   </footer>
-
-  <!-- Link to the JavaScript file -->
-  <script src="slideshow.js"></script>
 </body>
 </html>
