@@ -49,23 +49,27 @@ header {
   border-radius: 5px;
 }
 
-/* Dropdown */
+/* Dropdown container */
 .dropdown {
   position: relative;
 }
 
+/* Initially hidden */
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #222;
-  min-width: 180px;
   top: 100%;
   left: 0;
+  min-width: 180px;
+  flex-direction: column;
   border-radius: 6px;
   z-index: 999;
 }
 
+/* Style individual items */
 .dropdown-content li {
+  display: block;
   border-bottom: 1px solid #333;
 }
 
@@ -73,10 +77,16 @@ header {
   display: block;
   padding: 0.6rem;
   color: #f4f4f4;
+  text-decoration: none;
 }
 
+.dropdown-content li a:hover {
+  background: #333;
+}
+
+/* Show dropdown on hover */
 .dropdown:hover .dropdown-content {
-  display: block;
+  display: flex;
 }
 
 /* Hero Section */
