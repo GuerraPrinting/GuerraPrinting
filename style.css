@@ -1,4 +1,4 @@
-/* Reset & Base Styles */
+/* === Base Reset === */
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f7f7f7;
+  background-color: #f8f8f8;
   color: #333;
   line-height: 1.6;
 }
@@ -18,21 +18,19 @@ body {
   padding: 0 20px;
 }
 
-/* Header */
+/* === Header === */
 header {
-  background-color: #121212;
-  color: white;
+  background-color: #111;
+  color: #fff;
   padding: 20px 0;
+  position: relative;
 }
 
-.logo {
-  font-size: 28px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+.logo img {
+  height: 60px;
 }
 
-/* Navigation */
+/* === Navigation === */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -48,18 +46,18 @@ header {
 }
 
 .navbar a {
-  color: white;
+  color: #fff;
   text-decoration: none;
   padding: 8px 12px;
   border-radius: 4px;
-  transition: background 0.3s ease;
+  transition: background 0.3s;
 }
 
 .navbar a:hover {
   background-color: #333;
 }
 
-/* Dropdown */
+/* === Dropdown Menu === */
 .dropdown {
   position: relative;
 }
@@ -67,97 +65,90 @@ header {
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 38px;
+  top: 40px;
   left: 0;
   background-color: #222;
-  padding: 20px;
-  flex-direction: column;
-  z-index: 1000;
+  padding: 10px 0;
+  border-radius: 4px;
+  min-width: 200px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  border-radius: 6px;
-  min-width: 240px;
+  z-index: 1000;
+  flex-direction: column;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content,
+.dropdown-content:hover {
   display: flex;
 }
 
 .dropdown-content a {
-  color: white;
-  font-size: 14px;
-  margin: 6px 0;
-  transition: color 0.2s ease;
+  color: #fff;
+  padding: 10px 16px;
+  text-decoration: none;
+  transition: background 0.3s;
 }
 
 .dropdown-content a:hover {
-  color: #00c3ff;
+  background-color: #444;
 }
 
 .search-box input {
   padding: 6px 10px;
   border-radius: 4px;
   border: none;
-  outline: none;
   font-size: 14px;
 }
 
-/* Hero Section */
+/* === Hero Section === */
 .hero {
+  background: linear-gradient(to right, #e0e0e0, #ffffff);
   text-align: center;
-  padding: 100px 20px;
-  background: linear-gradient(145deg, #e8e8e8, #ffffff);
+  padding: 80px 20px;
 }
 
 .hero h1 {
-  font-size: 42px;
+  font-size: 36px;
+  color: #111;
   margin-bottom: 10px;
-  color: #222;
 }
 
 .hero p {
   font-size: 18px;
-  color: #666;
+  color: #555;
 }
 
-/* Footer */
+/* === Slideshow === */
+.slideshow-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 60px auto;
+}
+
+.slide {
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.fade {
+  animation: fadeEffect 1s ease-in-out;
+}
+
+@keyframes fadeEffect {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+/* === Footer === */
 footer {
-  background-color: #121212;
+  background-color: #111;
   color: #ccc;
   padding: 20px 0;
   text-align: center;
   font-size: 14px;
   margin-top: 60px;
-}
-
-/* Type Page Layout */
-.type-heading {
-  text-align: center;
-  font-size: 32px;
-  margin: 40px 0 20px;
-  color: #222;
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 10px;
-  text-transform: uppercase;
-}
-
-.type-sublist {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 60px;
-}
-
-.type-sublist span {
-  background-color: #eee;
-  padding: 10px 15px;
-  border-radius: 5px;
-  font-size: 16px;
-  color: #444;
-  transition: background 0.3s;
-}
-
-.type-sublist span:hover {
-  background-color: #ddd;
-  cursor: default;
 }
