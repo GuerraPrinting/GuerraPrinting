@@ -1,23 +1,33 @@
-window.onload = function () {
-  let slideIndex = 0;
-  const slides = document.querySelectorAll(".slide-img");
+let slideIndex = 0;
+const slides = document.querySelectorAll(".slide-img");
 
-  function showSlides() {
-    // Hide all slides
-    slides.forEach((slide) => {
-      slide.classList.remove("active");
-    });
+function showSlides() {
+  slides.forEach((slide, i) => {
+    slide.style.opacity = "0";
+    slide.style.transition = "opacity 1s ease-in-out";
+  });
 
-    // Advance to the next slide
-    slideIndex = (slideIndex + 1) % slides.length;
+  slideIndex++;
+  if (slideIndex > slides.length) slideIndex = 1;
 
-    // Show the current slide
-    slides[slideIndex].classList.add("active");
+  slides[slideIndex - 1].style.opacity = "1";
 
-    // Loop every 4 seconds
-    setTimeout(showSlides, 4000);
+  setTimeout(showSlides, 4000); // Change slide every 4 seconds
+}
+
+window.onload = () => {
+  slides.forEach(slide => {
+    slide.style.position = "absolute";
+    slide.style.top = "0";
+    slide.style.left = "0";
+    slide.style.width = "100%";
+    slide.style.height = "100%";
+    slide.style.zIndex = "1";
+    slide.style.opacity = "0";
+  });
+
+  if (slides.length > 0) {
+    slides[0].style.opacity = "1"; // Show first slide immediately
+    showSlides(); // Start the cycle
   }
-
-  // Start the slideshow
-  showSlides();
 };
