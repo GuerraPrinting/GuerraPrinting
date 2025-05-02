@@ -55,7 +55,7 @@ header {
 }
 
 .dropdown-content {
-  display: none; /* Hide by default */
+  display: none;
   position: absolute;
   top: 100%;
   left: 0;
@@ -68,7 +68,6 @@ header {
   z-index: 999;
 }
 
-/* Fix for nested ul styles */
 .dropdown-content ul {
   display: block;
   padding: 0;
@@ -93,10 +92,10 @@ header {
   background-color: #333;
 }
 
-/* Show dropdown only on hover */
 .dropdown:hover .dropdown-content {
   display: flex;
 }
+
 /* Hero Section */
 .hero {
   background: url("images/hero.jpg") center/cover no-repeat;
