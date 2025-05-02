@@ -1,77 +1,163 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Guerra Printing</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <div class="container">
-      <div class="logo">Guerra Printing</div>
-      <nav class="navbar">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li class="dropdown">
-            <a href="#">Services</a>
-            <div class="dropdown-content">
-              <div class="dropdown-group">
-                <strong>Printed Materials</strong>
-                <a href="services/business-cards.html">Business Cards</a>
-                <a href="services/flyers.html">Flyers</a>
-                <a href="services/posters-menus.html">Posters / Menus</a>
-                <a href="services/brochures.html">Brochures</a>
-                <a href="services/invoices.html">Invoices</a>
-              </div>
-              <div class="dropdown-group">
-                <strong>Signage & Displays</strong>
-                <a href="services/banners.html">Banners</a>
-                <a href="services/vinyl-letters.html">Vinyl Letters</a>
-                <a href="services/window-perf.html">Window Perf</a>
-                <a href="services/wrap-trucks.html">Wrap Trucks</a>
-              </div>
-              <div class="dropdown-group">
-                <strong>Promotional Items</strong>
-                <a href="services/magnets.html">Magnets</a>
-                <a href="services/stickers.html">Stickers</a>
-              </div>
-              <div class="dropdown-group">
-                <strong>Apparel</strong>
-                <a href="services/t-shirts.html">T-Shirts</a>
-                <a href="services/tshirts-vinyl.html">T-Shirts with Vinyl</a>
-                <a href="services/silk-screen.html">Silk Screen T-Shirts</a>
-                <a href="services/hoodies.html">Hoodies</a>
-                <a href="services/caps.html">Caps</a>
-                <a href="services/embroidery.html">Embroidery</a>
-              </div>
-              <div class="dropdown-group">
-                <strong>Specialty</strong>
-                <a href="services/sublimation.html">Sublimation</a>
-              </div>
-            </div>
-          </li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-        <div class="search-box">
-          <input type="text" placeholder="Search...">
-        </div>
-      </nav>
-    </div>
-  </header>
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <main>
-    <section class="hero">
-      <h1>Welcome to Guerra Printing</h1>
-      <p>High-quality custom printing for your business and personal needs.</p>
-    </section>
-  </main>
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  line-height: 1.6;
+}
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Guerra Printing. All rights reserved.</p>
-    </div>
-  </footer>
-</body>
-</html>
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+header {
+  background-color: #121212;
+  color: white;
+  padding: 20px 0;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #333;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 38px;
+  left: 0;
+  background-color: #222;
+  padding: 20px;
+  flex-direction: column;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  min-width: 240px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+.dropdown-content a {
+  color: white;
+  font-size: 14px;
+  margin: 6px 0;
+  transition: color 0.2s ease;
+}
+
+.dropdown-content a:hover {
+  color: #00c3ff;
+}
+
+.search-box input {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(145deg, #e8e8e8, #ffffff);
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #666;
+}
+
+/* Footer */
+footer {
+  background-color: #121212;
+  color: #ccc;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 60px;
+}
+
+/* Type Page Layout */
+.type-heading {
+  text-align: center;
+  font-size: 32px;
+  margin: 40px 0 20px;
+  color: #222;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.type-sublist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 60px;
+}
+
+.type-sublist span {
+  background-color: #eee;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #444;
+  transition: background 0.3s;
+}
+
+.type-sublist span:hover {
+  background-color: #ddd;
+  cursor: default;
+}
