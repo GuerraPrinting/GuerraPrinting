@@ -7,95 +7,86 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- Header / Navigation -->
   <header>
-    <div class="logo-center">
-      <img src="logo.jpg" alt="Guerra Printing Logo" />
-      <h1 class="company-name">Guerra Printing</h1>
-    </div>
+    <div class="logo">Guerra Printing</div>
     <nav class="navbar">
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="services.html">Services</a>
+          <ul class="dropdown-content">
+            <li><a href="services.html#apparel">Apparel</a></li>
+            <li><a href="services.html#paper-products">Paper Products</a></li>
+            <li><a href="services.html#signage">Signage</a></li>
+            <li><a href="services.html#specialty-items">Specialty Items</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section class="hero" id="home">
-      <h2>Custom Printing Solutions for Every Need</h2>
-    </section>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <h1>Guerra Printing</h1>
+      <p>Custom Apparel • Signage • Paper Goods • Branding</p>
+    </div>
+  </section>
 
-    <section id="services" class="services">
-      <h2>Services</h2>
+  <!-- Slideshow -->
+  <section class="slideshow">
+    <div class="slide fade">
+      <img src="images/slide1.jpg" alt="Embroidery and custom shirts" />
+      <div class="caption">Embroidery & Custom Apparel</div>
+    </div>
+    <div class="slide fade">
+      <img src="images/slide2.jpg" alt="Banners and signs" />
+      <div class="caption">Vinyl Banners & Signs</div>
+    </div>
+    <div class="slide fade">
+      <img src="images/slide3.jpg" alt="Business cards and flyers" />
+      <div class="caption">Flyers, Brochures, and Cards</div>
+    </div>
+  </section>
 
-      <div class="category">
-        <h3>Printed Materials</h3>
-        <ul class="grid">
-          <li>Business Cards</li>
-          <li>Flyers</li>
-          <li>Poster/Menus</li>
-          <li>Brochures</li>
-        </ul>
+  <!-- Services Preview -->
+  <section class="services-preview">
+    <h2>What We Offer</h2>
+    <div class="service-grid">
+      <div class="service-box">
+        <img src="images/apparel.jpg" alt="Apparel" />
+        <h3>Custom Apparel</h3>
+        <p>Shirts, hoodies, caps, embroidery, silk screen & more.</p>
       </div>
-
-      <div class="category">
-        <h3>Signage & Displays</h3>
-        <ul class="grid">
-          <li>Banners</li>
-          <li>Vinyl Letters</li>
-          <li>Window Perf</li>
-          <li>Wrap Trucks</li>
-        </ul>
+      <div class="service-box">
+        <img src="images/paper.jpg" alt="Paper Products" />
+        <h3>Paper Products</h3>
+        <p>Business cards, flyers, invoices, brochures and more.</p>
       </div>
-
-      <div class="category">
-        <h3>Promotional Items</h3>
-        <ul class="grid">
-          <li>Magnets</li>
-          <li>Stickers</li>
-        </ul>
+      <div class="service-box">
+        <img src="images/signage.jpg" alt="Signage" />
+        <h3>Signs & Wraps</h3>
+        <p>Banners, vinyl letters, window perf, and truck wraps.</p>
       </div>
+    </div>
+  </section>
 
-      <div class="category">
-        <h3>Apparel</h3>
-        <ul class="grid">
-          <li>T-Shirts</li>
-          <li>T-Shirts with Vinyl</li>
-          <li>Silk Screen T-Shirts</li>
-          <li>Hoodies</li>
-          <li>Caps</li>
-          <li>Embroidery</li>
-        </ul>
-      </div>
-
-      <div class="category">
-        <h3>Specialty</h3>
-        <ul class="grid">
-          <li>Sublimation</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="about">
-      <h2>About Us</h2>
-      <p>
-        Guerra Printing has been a trusted name in custom printing solutions, dedicated to delivering
-        quality and precision for every project. Our team combines expertise with the latest technology
-        to bring your vision to life.
-      </p>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p><strong>Phone:</strong> 773-457-09288</p>
-      <p><strong>Address:</strong> 2540 W 51st St</p>
-    </section>
-  </main>
-
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Guerra Printing. All rights reserved.</p>
+    <div class="social">
+      <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+      <a href="https://www.tiktok.com/" target="_blank">TikTok</a>
+    </div>
+    <div class="contact-info">
+      <p>Contact: info@gueraprinting.com | (312) 555-1234</p>
+      <p>&copy; 2025 Guerra Printing. All rights reserved.</p>
+    </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
