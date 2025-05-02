@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-/* Base */
+/* Body */
 body {
   font-family: Arial, sans-serif;
   background-color: #121212;
@@ -30,12 +30,13 @@ header {
   object-fit: contain;
 }
 
-/* Nav */
+/* Navigation */
 .navbar {
   display: flex;
   align-items: center;
-  flex-grow: 1;
   justify-content: space-between;
+  flex-grow: 1;
+  margin-left: 2rem;
 }
 
 .navbar ul {
@@ -48,12 +49,12 @@ header {
   color: #f4f4f4;
   text-decoration: none;
   padding: 0.5rem 0.75rem;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: background 0.3s;
 }
 
 .navbar a:hover {
   background-color: #333;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 /* Dropdown */
@@ -67,10 +68,11 @@ header {
   top: 100%;
   left: 0;
   background-color: #222;
-  min-width: 180px;
   border-radius: 5px;
   z-index: 999;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  flex-direction: column;
+  min-width: 180px;
 }
 
 .dropdown-content li {
@@ -98,12 +100,7 @@ header {
   display: block;
 }
 
-
 /* Search Bar */
-.search-bar {
-  margin-left: 2rem;
-}
-
 .search-bar input {
   padding: 0.4rem 0.75rem;
   border: none;
@@ -134,23 +131,23 @@ header {
   display: block;
 }
 
+/* Hero Overlay */
 .hero-overlay {
   position: relative;
   z-index: 2;
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(0, 0, 0, 0.6);
   padding: 2rem 3rem;
   max-width: 700px;
   text-align: center;
   border-radius: 10px;
   margin: auto;
-  top: 45%;
+  top: 40%;
   transform: translateY(-50%);
 }
 
 .hero-overlay h1 {
   font-size: 3rem;
-  color: #fff;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .hero-overlay p {
@@ -158,7 +155,7 @@ header {
   color: #ccc;
 }
 
-/* Services */
+/* Services Preview */
 .services-preview {
   padding: 3rem 2rem;
   background-color: #1e1e1e;
@@ -168,7 +165,6 @@ header {
 .services-preview h2 {
   margin-bottom: 2rem;
   font-size: 2rem;
-  font-weight: bold;
 }
 
 .service-grid {
@@ -218,7 +214,7 @@ footer .social a {
   color: #ccc;
   margin: 0 1rem;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
 
 footer .social a:hover {
