@@ -2,7 +2,7 @@ let slideIndex = 0;
 const slides = document.querySelectorAll(".slide-img");
 
 function showSlides() {
-  // Remove active class from all slides
+  // Remove 'active' class from all slides
   slides.forEach((slide) => {
     slide.classList.remove("active");
   });
@@ -10,7 +10,7 @@ function showSlides() {
   // Move to next slide
   slideIndex = (slideIndex + 1) % slides.length;
 
-  // Add active class to the current slide
+  // Show the next slide
   slides[slideIndex].classList.add("active");
 
   // Repeat every 4 seconds
@@ -19,7 +19,7 @@ function showSlides() {
 
 window.onload = () => {
   if (slides.length > 0) {
-    slides[0].classList.add("active"); // Show first slide on load
+    slides[0].classList.add("active"); // Show first slide immediately
     showSlides();
   }
 };
