@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-/* Body */
+/* General */
 body {
   font-family: Arial, sans-serif;
   background-color: #121212;
@@ -20,24 +20,17 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
 }
 
-/* Logo */
 .logo img {
   height: 40px;
-  width: auto;
-  object-fit: contain;
 }
 
 /* Navbar */
 nav ul {
-  list-style: none;
   display: flex;
+  list-style: none;
   gap: 2rem;
-  align-items: center;
 }
 
 nav li {
@@ -49,7 +42,6 @@ nav a {
   text-decoration: none;
   padding: 0.5rem 0.75rem;
   display: block;
-  transition: background 0.3s ease;
 }
 
 nav a:hover {
@@ -64,11 +56,10 @@ nav a:hover {
   top: 100%;
   left: 0;
   background-color: #222;
-  border-radius: 4px;
   min-width: 180px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  z-index: 1000;
   flex-direction: column;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
 .dropdown:hover .dropdown-content {
@@ -76,64 +67,41 @@ nav a:hover {
 }
 
 .dropdown-content a {
-  padding: 0.75rem 1rem;
+  padding: 0.6rem 1rem;
   color: #f4f4f4;
-  text-decoration: none;
   border-bottom: 1px solid #333;
-}
-
-.dropdown-content a:last-child {
-  border-bottom: none;
 }
 
 .dropdown-content a:hover {
   background-color: #333;
 }
 
-/* Search Bar */
-.search-bar input {
-  padding: 0.4rem 0.6rem;
-  border: none;
-  border-radius: 4px;
-  background-color: #333;
-  color: #fff;
+.dropdown-content a:last-child {
+  border-bottom: none;
 }
 
-/* Hero Section */
+/* Hero */
 .hero {
   position: relative;
-  height: 90vh;
+  height: 60vh;
   overflow: hidden;
 }
 
 .slide-img {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 1;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
 }
 
-.slide-img.active {
-  opacity: 1;
-}
-
-/* Hero Overlay */
 .hero-overlay {
-  position: relative;
-  z-index: 2;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 2rem 3rem;
-  max-width: 700px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
+  background: rgba(0,0,0,0.6);
+  padding: 2rem 3rem;
   border-radius: 10px;
-  margin: auto;
-  top: 40%;
-  transform: translateY(-50%);
 }
 
 .hero-overlay h1 {
@@ -146,7 +114,7 @@ nav a:hover {
   color: #ccc;
 }
 
-/* Services Preview */
+/* Services */
 .services-preview {
   padding: 3rem 2rem;
   background-color: #1e1e1e;
@@ -161,14 +129,14 @@ nav a:hover {
 .service-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .service-box {
   background: #2a2a2a;
   border-radius: 8px;
   padding: 1rem;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s;
 }
 
 .service-box:hover {
@@ -184,7 +152,6 @@ nav a:hover {
 
 .service-box h3 {
   margin-top: 1rem;
-  font-size: 1.25rem;
   color: #f9f9f9;
 }
 
@@ -195,19 +162,39 @@ nav a:hover {
 
 /* Footer */
 footer {
-  background: #111;
-  color: #ccc;
+  background-color: #111;
   padding: 2rem;
   text-align: center;
 }
 
-footer .social a {
-  color: #ccc;
-  margin: 0 1rem;
-  text-decoration: none;
-  transition: color 0.3s;
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+  margin-bottom: 1rem;
 }
 
-footer .social a:hover {
+footer a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+footer a:hover {
   color: #fff;
+}
+
+footer h4 {
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+footer p {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+footer .copyright {
+  font-size: 0.8rem;
+  color: #555;
 }
