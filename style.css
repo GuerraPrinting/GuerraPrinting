@@ -27,7 +27,7 @@ header {
   height: 40px;
 }
 
-/* Nav */
+/* Navigation */
 nav ul {
   display: flex;
   list-style: none;
@@ -52,7 +52,7 @@ nav a:hover {
   border-radius: 4px;
 }
 
-/* Dropdown */
+/* Dropdown Menu */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -72,7 +72,6 @@ nav a:hover {
 .dropdown-content a {
   padding: 0.6rem 1rem;
   color: #f4f4f4;
-  text-decoration: none;
   border-bottom: 1px solid #333;
 }
 
@@ -84,30 +83,62 @@ nav a:hover {
   background-color: #333;
 }
 
-/* Services Overview Header */
-.services-overview {
-  background-color: #1e1e1e;
-  text-align: center;
-  padding: 3rem 2rem;
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
 }
 
-.services-overview h1 {
-  font-size: 2.5rem;
+.slide-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem 3rem;
+  border-radius: 10px;
+}
+
+.hero-overlay h1 {
+  font-size: 3rem;
   margin-bottom: 1rem;
 }
 
-.services-overview p {
-  font-size: 1.1rem;
-  color: #bbb;
+.hero-overlay p {
+  font-size: 1.2rem;
+  color: #ccc;
 }
 
-/* Services Grid */
+/* Services Section */
+.services-overview {
+  padding: 3rem 2rem;
+  background-color: #141414;
+  text-align: center;
+}
+
+.services-overview h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  padding: 3rem 2rem;
-  background-color: #141414;
+  margin-top: 2rem;
 }
 
 .service-item {
@@ -115,6 +146,7 @@ nav a:hover {
   border-radius: 8px;
   padding: 1.5rem;
   transition: transform 0.3s ease;
+  text-align: center;
 }
 
 .service-item:hover {
@@ -129,20 +161,15 @@ nav a:hover {
   margin-bottom: 1rem;
 }
 
-.service-item h2 {
-  font-size: 1.4rem;
-  margin-bottom: 0.8rem;
+.service-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
   color: #fff;
 }
 
-.service-item ul {
-  list-style: disc;
-  margin-left: 1.2rem;
+.service-item p {
+  font-size: 0.95rem;
   color: #ccc;
-}
-
-.service-item ul li {
-  margin-bottom: 0.4rem;
 }
 
 /* Footer */
@@ -150,7 +177,7 @@ footer {
   background-color: #111;
   padding: 2rem;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .footer-grid {
