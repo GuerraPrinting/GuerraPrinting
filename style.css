@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-/* General */
+/* Base styles */
 body {
   font-family: Arial, sans-serif;
   background-color: #121212;
@@ -20,17 +20,19 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .logo img {
   height: 40px;
 }
 
-/* Navbar */
+/* Nav */
 nav ul {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 1.5rem;
+  align-items: center;
 }
 
 nav li {
@@ -42,6 +44,7 @@ nav a {
   text-decoration: none;
   padding: 0.5rem 0.75rem;
   display: block;
+  transition: background 0.3s ease;
 }
 
 nav a:hover {
@@ -58,8 +61,8 @@ nav a:hover {
   background-color: #222;
   min-width: 180px;
   flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   z-index: 1000;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
 .dropdown:hover .dropdown-content {
@@ -69,95 +72,77 @@ nav a:hover {
 .dropdown-content a {
   padding: 0.6rem 1rem;
   color: #f4f4f4;
+  text-decoration: none;
   border-bottom: 1px solid #333;
-}
-
-.dropdown-content a:hover {
-  background-color: #333;
 }
 
 .dropdown-content a:last-child {
   border-bottom: none;
 }
 
-/* Hero */
-.hero {
-  position: relative;
-  height: 60vh;
-  overflow: hidden;
+.dropdown-content a:hover {
+  background-color: #333;
 }
 
-.slide-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+/* Services Overview Header */
+.services-overview {
+  background-color: #1e1e1e;
   text-align: center;
-  background: rgba(0,0,0,0.6);
-  padding: 2rem 3rem;
-  border-radius: 10px;
+  padding: 3rem 2rem;
 }
 
-.hero-overlay h1 {
-  font-size: 3rem;
+.services-overview h1 {
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
-.hero-overlay p {
-  font-size: 1.2rem;
-  color: #ccc;
+.services-overview p {
+  font-size: 1.1rem;
+  color: #bbb;
 }
 
-/* Services */
-.services-preview {
-  padding: 3rem 2rem;
-  background-color: #1e1e1e;
-  text-align: center;
-}
-
-.services-preview h2 {
-  margin-bottom: 2rem;
-  font-size: 2rem;
-}
-
-.service-grid {
+/* Services Grid */
+.services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
+  padding: 3rem 2rem;
+  background-color: #141414;
 }
 
-.service-box {
-  background: #2a2a2a;
+.service-item {
+  background-color: #222;
   border-radius: 8px;
-  padding: 1rem;
-  transition: transform 0.3s;
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
 }
 
-.service-box:hover {
-  transform: scale(1.03);
+.service-item:hover {
+  transform: translateY(-5px);
 }
 
-.service-box img {
+.service-item img {
   width: 100%;
   height: 180px;
   object-fit: cover;
   border-radius: 6px;
+  margin-bottom: 1rem;
 }
 
-.service-box h3 {
-  margin-top: 1rem;
-  color: #f9f9f9;
+.service-item h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  color: #fff;
 }
 
-.service-box p {
-  font-size: 0.9rem;
-  color: #bbb;
+.service-item ul {
+  list-style: disc;
+  margin-left: 1.2rem;
+  color: #ccc;
+}
+
+.service-item ul li {
+  margin-bottom: 0.4rem;
 }
 
 /* Footer */
@@ -165,6 +150,7 @@ footer {
   background-color: #111;
   padding: 2rem;
   text-align: center;
+  margin-top: 2rem;
 }
 
 .footer-grid {
@@ -175,17 +161,20 @@ footer {
   margin-bottom: 1rem;
 }
 
-footer a {
-  color: #ccc;
-  text-decoration: none;
-}
-
-footer a:hover {
+footer h4 {
+  margin-bottom: 0.5rem;
   color: #fff;
 }
 
-footer h4 {
-  margin-bottom: 0.5rem;
+footer a {
+  color: #ccc;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 0.95rem;
+}
+
+footer a:hover {
   color: #fff;
 }
 
@@ -197,4 +186,26 @@ footer p {
 footer .copyright {
   font-size: 0.8rem;
   color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .footer-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .hero-overlay p {
+    font-size: 1rem;
+  }
 }
