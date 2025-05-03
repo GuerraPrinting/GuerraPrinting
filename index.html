@@ -3,104 +3,109 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Guerra Printing</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Dropdown Test</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #121212;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #1a1a1a;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+    }
+
+    nav li {
+      position: relative;
+    }
+
+    nav a {
+      color: #f4f4f4;
+      text-decoration: none;
+      padding: 0.5rem 0.75rem;
+      display: block;
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #333;
+      border-radius: 4px;
+    }
+
+    /* Dropdown Content */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #222;
+      border-radius: 4px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      min-width: 180px;
+      z-index: 1000;
+      flex-direction: column;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: flex;
+    }
+
+    .dropdown-content a {
+      padding: 0.75rem 1rem;
+      color: #f4f4f4;
+      text-decoration: none;
+      border-bottom: 1px solid #333;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #333;
+    }
+
+    .dropdown-content a:last-child {
+      border-bottom: none;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Header -->
   <header>
-    <div class="logo">
-      <img src="logo.jpg" alt="Guerra Printing Logo" />
-    </div>
-    <nav class="navbar">
+    <div class="logo">Guerra Printing</div>
+    <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Home</a></li>
         <li class="dropdown">
-          <a href="services.html">Services</a>
-          <ul class="dropdown-content">
-            <li><a href="services.html#apparel">Apparel</a></li>
-            <li><a href="services.html#paper-products">Paper Products</a></li>
-            <li><a href="services.html#signage">Signage</a></li>
-            <li><a href="services.html#specialty-items">Specialty Items</a></li>
-          </ul>
+          <a href="#">Services</a>
+          <div class="dropdown-content">
+            <a href="#apparel">Apparel</a>
+            <a href="#paper-products">Paper Products</a>
+            <a href="#signage">Signage</a>
+            <a href="#specialty-items">Specialty Items</a>
+          </div>
         </li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
-      <div class="search-bar">
-        <input type="text" placeholder="Search..." />
-      </div>
     </nav>
   </header>
 
-  <!-- Hero Section with Background Slideshow -->
-  <section class="hero">
-    <img src="slide1.jpg" class="slide-img active" alt="Slide 1" />
-    <img src="slide2.jpg" class="slide-img" alt="Slide 2" />
-    <img src="slide3.jpg" class="slide-img" alt="Slide 3" />
-    <div class="hero-overlay">
-      <h1>Guerra Printing</h1>
-      <p>Custom Apparel • Signage • Paper Goods • Branding</p>
-    </div>
-  </section>
-
-  <!-- Services Preview -->
-  <section class="services-preview">
-    <h2>What We Offer</h2>
-    <div class="service-grid">
-      <div class="service-box">
-        <img src="images/apparel.jpg" alt="Apparel" />
-        <h3>Custom Apparel</h3>
-        <p>Shirts, hoodies, caps, embroidery, silk screen & more.</p>
-      </div>
-      <div class="service-box">
-        <img src="images/paper.jpg" alt="Paper Products" />
-        <h3>Paper Products</h3>
-        <p>Business cards, flyers, invoices, brochures and more.</p>
-      </div>
-      <div class="service-box">
-        <img src="images/signage.jpg" alt="Signage" />
-        <h3>Signs & Wraps</h3>
-        <p>Banners, vinyl letters, window perf, and truck wraps.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="social">
-      <a href="https://www.instagram.com/guerra_printing/" target="_blank">Instagram</a>
-      <a href="https://www.tiktok.com/@guerraprinting1" target="_blank">TikTok</a>
-    </div>
-    <div class="contact-info">
-      <p>Contact: info@gueraprinting.com | (312) 555-1234</p>
-      <p>&copy; 2025 Guerra Printing. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script>
-    // SLIDESHOW FIX
-    let slideIndex = 0;
-    const slides = document.querySelectorAll(".slide-img");
-
-    function showSlides() {
-      slides.forEach((slide) => {
-        slide.classList.remove("active");
-      });
-
-      slideIndex = (slideIndex + 1) % slides.length;
-      slides[slideIndex].classList.add("active");
-
-      setTimeout(showSlides, 4000);
-    }
-
-    window.onload = () => {
-      if (slides.length > 0) {
-        slides[0].classList.add("active");
-        showSlides();
-      }
-    };
-  </script>
 </body>
 </html>
