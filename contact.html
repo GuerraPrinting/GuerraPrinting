@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Guerra Printing</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="logo.jpg" alt="Guerra Printing Logo" />
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="services.html">Services</a>
+          <div class="dropdown-content">
+            <a href="services.html#apparel">Apparel</a>
+            <a href="services.html#paper">Paper Products</a>
+            <a href="services.html#signs">Signage</a>
+            <a href="services.html#specialty">Specialty Items</a>
+          </div>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contact Overview -->
+  <section class="services-overview">
+    <h1>Get in Touch</h1>
+    <p>Questions? Custom orders? Need a quote? Let us know!</p>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section style="padding: 3rem 2rem; background-color: #141414;">
+    <div style="max-width: 900px; margin: auto; display: flex; flex-wrap: wrap; gap: 2rem;">
+      <div style="flex: 1 1 400px;">
+        <h2>Contact Info</h2>
+        <p>📍 <strong>Location:</strong> Chicago, IL</p>
+        <p>📞 <strong>Phone:</strong> (773) 457-0928</p>
+        <p>📧 <strong>Email:</strong> info@gueraprinting.com</p>
+        <p>📦 <strong>Pickup Hours:</strong> Mon–Fri, 10am–6pm</p>
+        <img src="https://via.placeholder.com/400x250?text=Find+Us+Here" alt="Map" style="width: 100%; border-radius: 6px; margin-top: 1rem;" />
+      </div>
+
+      <div style="flex: 1 1 400px;">
+        <h2>Send Us a Message</h2>
+        <!-- Use Formspree for working form submission -->
+        <form action="https://formspree.io/f/your-form-id" method="POST">
+          <label for="name">Name</label><br>
+          <input type="text" name="name" required style="width:100%; padding:0.6rem; margin-bottom:1rem; border-radius:4px; border:none; background:#333; color:#fff;"><br>
+
+          <label for="email">Email</label><br>
+          <input type="email" name="email" required style="width:100%; padding:0.6rem; margin-bottom:1rem; border-radius:4px; border:none; background:#333; color:#fff;"><br>
+
+          <label for="message">Message</label><br>
+          <textarea name="message" rows="5" required style="width:100%; padding:0.6rem; margin-bottom:1rem; border-radius:4px; border:none; background:#333; color:#fff;"></textarea><br>
+
+          <button type="submit" style="padding:0.7rem 1.2rem; background:#f4f4f4; color:#000; border:none; border-radius:4px; cursor:pointer;">Send</button>
+        </form>
+        <!-- OR use mailto as a fallback -->
+        <!-- <form action="mailto:info@gueraprinting.com" method="POST" enctype="text/plain"> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h4>Contact</h4>
+        <p>📍 Chicago, IL</p>
+        <p>📞 (773) 457-0928</p>
+        <p>📧 info@gueraprinting.com</p>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <a href="https://www.instagram.com/guerra_printing/" target="_blank">Instagram</a><br>
+        <a href="https://www.tiktok.com/@guerraprinting1" target="_blank">TikTok</a>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="services.html">Services</a><br>
+        <a href="about.html">About Us</a><br>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <p class="copyright">© 2025 Guerra Printing. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
