@@ -15,7 +15,7 @@ body {
 
 /* Header */
 header {
-  background-color: #1a1a1a;
+  background-color: #1e1e1e; /* lighter than #121212 */
   padding: 1rem 2rem;
   display: flex;
   align-items: center;
