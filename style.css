@@ -21,7 +21,11 @@ header {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
+
 .logo {
   padding-right: 1rem;
 }
@@ -49,12 +53,29 @@ nav a {
   text-decoration: none;
   padding: 0.5rem 0.75rem;
   display: block;
-  transition: background 0.3s ease;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #f4f4f4;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: left;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
 }
 
 nav a:hover {
-  background-color: #333;
-  border-radius: 4px;
+  color: #fff;
 }
 
 /* Dropdown Menu */
@@ -86,6 +107,23 @@ nav a:hover {
 
 .dropdown-content a:hover {
   background-color: #333;
+}
+
+/* Call-to-Action Button */
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #0077ff;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #005fcc;
 }
 
 /* Hero Section */
