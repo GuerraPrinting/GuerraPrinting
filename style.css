@@ -150,9 +150,12 @@ nav a:hover {
   transform: translate(-50%, -50%);
   z-index: 2;
   text-align: center;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 2rem 3rem;
-  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid #00ccff;
+  box-shadow: 0 0 20px rgba(0, 204, 255, 0.2);
+  padding: 2.5rem 3.5rem;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
 }
 
 .hero-overlay h1 {
