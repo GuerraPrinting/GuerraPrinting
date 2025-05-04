@@ -22,6 +22,9 @@ header {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+.logo {
+  padding-right: 1rem;
+}
 
 .logo img {
   height: 90px;
