@@ -5,94 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Guerra Printing | Services</title>
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Barlow', sans-serif;
-      background-color: #121212;
-      color: #f4f4f4;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-    }
-    html {
-      scroll-behavior: smooth;
-    }
-    h2 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 2rem;
-      color: #00ccff;
-    }
-    .services-overview {
-      text-align: center;
-      padding: 4rem 2rem 2rem;
-    }
-    .services-overview h1 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 2.5rem;
-      color: #00ccff;
-      margin-bottom: 1rem;
-    }
-    .services-overview p {
-      font-size: 1.1rem;
-      color: #ccc;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-    .services-vertical {
-      display: flex;
-      flex-direction: column;
-      gap: 4rem;
-      padding: 4rem 2rem;
-    }
-    .service-block {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 2rem;
-      border-radius: 10px;
-      background-color: #1a1a1a;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-    }
-    .service-block:nth-child(even) {
-      background-color: #171717;
-    }
-    .service-block img {
-      width: 100%;
-      max-width: 1000px;
-      height: auto;
-      border-radius: 10px;
-      margin-bottom: 1.5rem;
-      object-fit: cover;
-    }
-    .service-text {
-      text-align: center;
-    }
-    .service-text ul {
-      list-style: none;
-      padding: 0;
-    }
-    .service-text li {
-      font-size: 1rem;
-      margin-bottom: 0.5rem;
-      color: #ddd;
-    }
-    .btn {
-      margin-top: 1rem;
-      background-color: #0077ff;
-      color: white;
-      padding: 0.5rem 1.2rem;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: background 0.3s ease;
-      display: inline-block;
-    }
-    .btn:hover {
-      background-color: #005fcc;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Guerra Printing Logo" />
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="services.html">Services</a>
+          <div class="dropdown-content">
+            <a href="#apparel">Apparel</a>
+            <a href="#paper">Paper Products</a>
+            <a href="#signs">Signage</a>
+            <a href="#specialty">Specialty Items</a>
+          </div>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <section class="services-overview">
     <h1>Explore Our Services</h1>
     <p>From custom apparel and signage to paper goods and promo items — Guerra Printing delivers high-quality, tailored results for your business or event.</p>
