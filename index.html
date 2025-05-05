@@ -30,7 +30,7 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero Slideshow -->
   <section class="hero">
     <img src="hero1.png" class="slide-img" style="opacity: 1; object-position: center 70%;">
     <img src="hero2.png" class="slide-img">
@@ -42,42 +42,34 @@
     </div>
   </section>
 
-  <!-- Service Preview Section -->
-  <section class="services-vertical">
-    <div class="service-block">
+  <!-- Highlighted Services Grid -->
+  <section class="services-grid" style="padding: 4rem 2rem;">
+    <div class="service-item">
       <img src="apparel-preview.png" alt="Custom Apparel">
-      <div class="service-text">
-        <h2>👕 Apparel Printing</h2>
-        <p>Embroidery, silk screen, vinyl — bring your clothing ideas to life with clean, professional detail.</p>
-        <a href="services.html#apparel" class="btn">Learn More</a>
-      </div>
+      <h3>👕 Apparel</h3>
+      <p>Embroidery, screen printing, and vinyl customization for hats, hoodies, and more.</p>
+      <a href="services.html#apparel" class="btn">Shop Apparel</a>
     </div>
 
-    <div class="service-block">
+    <div class="service-item">
       <img src="paper-preview.png" alt="Paper Goods">
-      <div class="service-text">
-        <h2>📄 Paper Products</h2>
-        <p>Business cards, flyers, invoices, menus — all printed crisp and ready for business.</p>
-        <a href="services.html#paper" class="btn">Learn More</a>
-      </div>
+      <h3>📄 Paper Goods</h3>
+      <p>Business cards, flyers, invoices, and menus — all printed crisp and clean.</p>
+      <a href="services.html#paper" class="btn">View Paper Products</a>
     </div>
 
-    <div class="service-block">
+    <div class="service-item">
       <img src="signage-preview.png" class="focus-lower-signage" alt="Signage">
-      <div class="service-text">
-        <h2>🪧 Signage</h2>
-        <p>Banners, vehicle wraps, window perf and more — high-impact visuals that turn heads.</p>
-        <a href="services.html#signs" class="btn">Learn More</a>
-      </div>
+      <h3>🪧 Signage</h3>
+      <p>Banners, wraps, decals, and vinyl — signage that makes your message pop.</p>
+      <a href="services.html#signs" class="btn">Explore Signs</a>
     </div>
 
-    <div class="service-block">
+    <div class="service-item">
       <img src="specialty-preview.png" alt="Specialty Items">
-      <div class="service-text">
-        <h2>🎁 Specialty Items</h2>
-        <p>Magnets, stickers, promo gear and more — get creative with branded goods.</p>
-        <a href="services.html#specialty" class="btn">Learn More</a>
-      </div>
+      <h3>🎁 Specialty</h3>
+      <p>Stickers, magnets, branded gifts — the small things that leave a big impression.</p>
+      <a href="services.html#specialty" class="btn">Custom Items</a>
     </div>
   </section>
 
@@ -109,5 +101,22 @@
     </div>
     <p class="copyright">© 2025 Guerra Printing. All rights reserved.</p>
   </footer>
+
+  <!-- JavaScript for Hero Slideshow -->
+  <script>
+    const slides = document.querySelectorAll('.slide-img');
+    let current = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.style.opacity = i === index ? '1' : '0';
+      });
+    }
+
+    setInterval(() => {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }, 4000);
+  </script>
 </body>
 </html>
