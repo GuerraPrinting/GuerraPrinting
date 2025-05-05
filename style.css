@@ -179,7 +179,32 @@ nav a:hover {
   color: #ccc;
 }
 
-/* Services Grid */
+/* Services Overview */
+.services-overview {
+  padding: 4rem 2rem 2rem;
+  text-align: center;
+}
+
+.services-overview h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.services-overview h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.5rem;
+  color: #00ccff;
+  margin-bottom: 1rem;
+}
+
+.services-overview p {
+  font-size: 1.1rem;
+  color: #ccc;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Services Grid (Home Page) */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -217,6 +242,72 @@ nav a:hover {
 .service-item p {
   font-size: 0.95rem;
   color: #ccc;
+}
+
+/* Services Vertical Layout (Services Page) */
+.services-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 4rem 2rem;
+  background-color: #121212;
+}
+
+.service-block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: #1a1a1a;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.service-block:nth-child(even) {
+  background-color: #171717;
+}
+
+.service-block img {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  object-fit: cover;
+}
+
+.service-text {
+  text-align: center;
+}
+
+.service-text h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #00ccff;
+}
+
+.service-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.service-text li {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #ddd;
+}
+
+.service-block .btn {
+  margin-top: 1rem;
+  background-color: #0077ff;
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s ease;
 }
 
 /* Footer */
@@ -284,7 +375,7 @@ footer .copyright {
   }
 }
 
-/* Image Focus */
+/* Image Positioning Fix */
 .focus-lower-signage {
   object-position: center 75%;
 }
