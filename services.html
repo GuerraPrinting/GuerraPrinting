@@ -1,128 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Guerra Printing | Services</title>
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Barlow', sans-serif;
+      background-color: #121212;
+      color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2rem;
+      color: #00ccff;
+    }
+    .services-overview {
+      text-align: center;
+      padding: 4rem 2rem 2rem;
+    }
+    .services-overview h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.5rem;
+      color: #00ccff;
+      margin-bottom: 1rem;
+    }
+    .services-overview p {
+      font-size: 1.1rem;
+      color: #ccc;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .services-vertical {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+      padding: 4rem 2rem;
+    }
+    .service-block {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+      border-radius: 10px;
+      background-color: #1a1a1a;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
+    .service-block:nth-child(even) {
+      background-color: #171717;
+    }
+    .service-block img {
+      width: 100%;
+      max-width: 1000px;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 1.5rem;
+      object-fit: cover;
+    }
+    .service-text {
+      text-align: center;
+    }
+    .service-text ul {
+      list-style: none;
+      padding: 0;
+    }
+    .service-text li {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      color: #ddd;
+    }
+    .btn {
+      margin-top: 1rem;
+      background-color: #0077ff;
+      color: white;
+      padding: 0.5rem 1.2rem;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      display: inline-block;
+    }
+    .btn:hover {
+      background-color: #005fcc;
+    }
+  </style>
 </head>
 <body>
-
-  <!-- Header -->
-  <header>
-    <div class="logo">
-      <img src="logo.png" alt="Guerra Printing Logo" />
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li class="dropdown">
-          <a href="services.html">Services</a>
-          <div class="dropdown-content">
-            <a href="#apparel">Apparel</a>
-            <a href="#paper">Paper Products</a>
-            <a href="#signs">Signage</a>
-            <a href="#specialty">Specialty Items</a>
-          </div>
-        </li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Services Overview -->
   <section class="services-overview">
-    <h1>Our Services</h1>
-    <p>Providing high-quality custom printing and design for apparel, signage, paper products, and more.</p>
+    <h1>Explore Our Services</h1>
+    <p>From custom apparel and signage to paper goods and promo items — Guerra Printing delivers high-quality, tailored results for your business or event.</p>
   </section>
 
-  <!-- Vertical Services Section -->
-<section class="services-vertical">
-
-  <div class="service-block" id="apparel">
-    <img src="https://via.placeholder.com/1000x300?text=Custom+Apparel" alt="Apparel">
-    <div class="service-text">
-      <h2>Apparel</h2>
-      <ul>
-        <li>Embroidery (Hats, Shirts, Jackets)</li>
-        <li>Silk Screen T-Shirts</li>
-        <li>Vinyl Printing on Garments</li>
-        <li>Custom Hoodies & Caps</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="service-block" id="paper">
-    <img src="https://via.placeholder.com/1000x300?text=Paper+Products" alt="Paper Products">
-    <div class="service-text">
-      <h2>Paper Products</h2>
-      <ul>
-        <li>Business Cards</li>
-        <li>Flyers & Brochures</li>
-        <li>Invoices & Carbonless Forms</li>
-        <li>Menus & Posters</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="service-block" id="signs">
-    <img src="https://via.placeholder.com/1000x300?text=Signs+%26+Wraps" alt="Signs">
-    <div class="service-text">
-      <h2>Signage</h2>
-      <ul>
-        <li>Banners & Yard Signs</li>
-        <li>Vinyl Lettering</li>
-        <li>Window Perf Graphics</li>
-        <li>Truck & Van Wraps</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="service-block" id="specialty">
-    <img src="https://via.placeholder.com/1000x300?text=Specialty+Items" alt="Specialty Items">
-    <div class="service-text">
-      <h2>Specialty Items</h2>
-      <ul>
-        <li>Magnets & Stickers</li>
-        <li>Custom Hats</li>
-        <li>Event Items & Giveaways</li>
-        <li>Promo Gear (Small Runs)</li>
-      </ul>
-    </div>
-  </div>
-
-</section>
-
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-grid">
-     <div>
-  <h4>Contact</h4>
-  <p>📍 Chicago, IL</p>
-  <p>📞 (773) 457-0928</p>
-  <p>📧 info@gueraprinting.com</p>
-  <p><strong> Business Hours:</strong><br>
-    Mon–Fri: 10am–6pm<br>
-    Sat: 10am–3pm<br>
-    Sun: 11am–3pm
-  </p>
-</div>
-      <div>
-        <h4>Follow Us</h4>
-        <a href="https://www.instagram.com/guerra_printing/" target="_blank">Instagram</a><br>
-        <a href="https://www.tiktok.com/@guerraprinting1" target="_blank">TikTok</a>
-      </div>
-      <div>
-        <h4>Quick Links</h4>
-        <a href="services.html">Services</a><br>
-        <a href="about.html">About Us</a><br>
-        <a href="contact.html">Contact</a>
+  <section class="services-vertical">
+    <div class="service-block" id="apparel" data-aos="fade-up">
+      <img src="https://via.placeholder.com/1000x300?text=Custom+Apparel" alt="Apparel">
+      <div class="service-text">
+        <h2>👕 Apparel</h2>
+        <ul>
+          <li>Embroidery (Hats, Shirts, Jackets)</li>
+          <li>Silk Screen T-Shirts</li>
+          <li>Vinyl Printing on Garments</li>
+          <li>Custom Hoodies & Caps</li>
+        </ul>
+        <a href="contact.html" class="btn">Request a Quote</a>
       </div>
     </div>
-    <p class="copyright">© 2025 Guerra Printing. All rights reserved.</p>
-  </footer>
 
+    <div class="service-block" id="paper" data-aos="fade-up">
+      <img src="https://via.placeholder.com/1000x300?text=Paper+Products" alt="Paper Products">
+      <div class="service-text">
+        <h2>📄 Paper Products</h2>
+        <ul>
+          <li>Business Cards</li>
+          <li>Flyers & Brochures</li>
+          <li>Invoices & Carbonless Forms</li>
+          <li>Menus & Posters</li>
+        </ul>
+        <a href="contact.html" class="btn">Request a Quote</a>
+      </div>
+    </div>
+
+    <div class="service-block" id="signs" data-aos="fade-up">
+      <img src="https://via.placeholder.com/1000x300?text=Signage" alt="Signs">
+      <div class="service-text">
+        <h2>🚩 Signage</h2>
+        <ul>
+          <li>Banners & Yard Signs</li>
+          <li>Vinyl Lettering</li>
+          <li>Window Perf Graphics</li>
+          <li>Truck & Van Wraps</li>
+        </ul>
+        <a href="contact.html" class="btn">Request a Quote</a>
+      </div>
+    </div>
+
+    <div class="service-block" id="specialty" data-aos="fade-up">
+      <img src="https://via.placeholder.com/1000x300?text=Specialty+Items" alt="Specialty Items">
+      <div class="service-text">
+        <h2>🎁 Specialty Items</h2>
+        <ul>
+          <li>Magnets & Stickers</li>
+          <li>Custom Hats</li>
+          <li>Event Items & Giveaways</li>
+          <li>Promo Gear (Small Runs)</li>
+        </ul>
+        <a href="contact.html" class="btn">Request a Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
 </body>
 </html>
