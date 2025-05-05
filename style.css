@@ -13,6 +13,10 @@ body {
   line-height: 1.6;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 h1, h2, h3, .hero-overlay h1 {
   font-family: 'Bebas Neue', sans-serif;
   letter-spacing: 1px;
@@ -21,7 +25,7 @@ h1, h2, h3, .hero-overlay h1 {
 
 /* Header */
 header {
-  background-color: #1e1e1e; /* lighter than #121212 */
+  background-color: #1e1e1e;
   padding: 1rem 2rem;
   display: flex;
   align-items: center;
@@ -177,14 +181,27 @@ nav a:hover {
 
 /* Services Section */
 .services-overview {
-  padding: 3rem 2rem;
-  background-color: #141414;
+  padding: 4rem 2rem 2rem;
   text-align: center;
 }
 
 .services-overview h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
+}
+
+.services-overview h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.5rem;
+  color: #00ccff;
+  margin-bottom: 1rem;
+}
+
+.services-overview p {
+  font-size: 1.1rem;
+  color: #ccc;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .services-grid {
@@ -289,10 +306,12 @@ footer .copyright {
     font-size: 1rem;
   }
 }
+
 /* Reposition signage image */
 .focus-lower-signage {
   object-position: center 75%;
 }
+
 /* Vertical Services Section */
 .services-vertical {
   display: flex;
@@ -303,13 +322,18 @@ footer .copyright {
 }
 
 .service-block {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #1b1b1b;
   padding: 2rem;
   border-radius: 10px;
+  background-color: #1a1a1a;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.service-block:nth-child(even) {
+  background-color: #171717;
 }
 
 .service-block img {
@@ -341,4 +365,19 @@ footer .copyright {
   font-size: 1rem;
   margin-bottom: 0.5rem;
   color: #ddd;
+}
+
+.service-block .btn {
+  margin-top: 1rem;
+  background-color: #0077ff;
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.service-block .btn:hover {
+  background-color: #005fcc;
 }
