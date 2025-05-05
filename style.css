@@ -379,3 +379,12 @@ footer .copyright {
 .focus-lower-signage {
   object-position: center 75%;
 }
+
+/* Anchor Scroll Offset Fix */
+[id]::before {
+  content: "";
+  display: block;
+  height: 100px;
+  margin-top: -100px;
+  visibility: hidden;
+}
