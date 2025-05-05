@@ -293,3 +293,52 @@ footer .copyright {
 .focus-lower-signage {
   object-position: center 75%;
 }
+/* Vertical Services Section */
+.services-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 4rem 2rem;
+  background-color: #121212;
+}
+
+.service-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1b1b1b;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.service-block img {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  object-fit: cover;
+}
+
+.service-text {
+  text-align: center;
+}
+
+.service-text h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #00ccff;
+}
+
+.service-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.service-text li {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #ddd;
+}
