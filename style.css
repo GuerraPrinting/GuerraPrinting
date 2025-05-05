@@ -1,3 +1,6 @@
+/* Fonts from Google */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow&display=swap');
+
 /* Reset */
 * {
   margin: 0;
@@ -6,6 +9,19 @@
 }
 
 /* Base styles */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+}
+
+[id]::before {
+  content: "";
+  display: block;
+  height: 110px;
+  margin-top: -110px;
+  visibility: hidden;
+}
+
 body {
   font-family: 'Barlow', sans-serif;
   background-color: #121212;
@@ -13,12 +29,7 @@ body {
   line-height: 1.6;
 }
 
-html {
-  scroll-padding-top: 120px;
-}
-
-
-h1, h2, h3, .hero-overlay h1 {
+h1, h2, h3, h4, .hero-overlay h1 {
   font-family: 'Bebas Neue', sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -35,10 +46,6 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-}
-
-.logo {
-  padding-right: 1rem;
 }
 
 .logo img {
@@ -89,7 +96,7 @@ nav a:hover {
   color: #fff;
 }
 
-/* Dropdown Menu */
+/* Dropdown */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -137,7 +144,7 @@ nav a:hover {
   background-color: #005fcc;
 }
 
-/* Hero Section */
+/* Hero */
 .hero {
   position: relative;
   height: 90vh;
@@ -180,19 +187,13 @@ nav a:hover {
   color: #ccc;
 }
 
-/* Services Overview */
+/* Overview Section */
 .services-overview {
   padding: 4rem 2rem 2rem;
   text-align: center;
 }
 
-.services-overview h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-
 .services-overview h1 {
-  font-family: 'Bebas Neue', sans-serif;
   font-size: 2.5rem;
   color: #00ccff;
   margin-bottom: 1rem;
@@ -205,7 +206,7 @@ nav a:hover {
   margin: 0 auto;
 }
 
-/* Services Grid (Home Page) */
+/* Services Grid (Homepage) */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -245,7 +246,7 @@ nav a:hover {
   color: #ccc;
 }
 
-/* Services Vertical Layout (Services Page) */
+/* Services Vertical (Services Page) */
 .services-vertical {
   display: flex;
   flex-direction: column;
@@ -255,14 +256,11 @@ nav a:hover {
 }
 
 .service-block {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: #1a1a1a;
   padding: 2rem;
   border-radius: 10px;
-  background-color: #1a1a1a;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
 
 .service-block:nth-child(even) {
@@ -278,12 +276,7 @@ nav a:hover {
   object-fit: cover;
 }
 
-.service-text {
-  text-align: center;
-}
-
 .service-text h2 {
-  font-family: 'Bebas Neue', sans-serif;
   font-size: 2rem;
   margin-bottom: 1rem;
   color: #00ccff;
@@ -298,17 +291,6 @@ nav a:hover {
   font-size: 1rem;
   margin-bottom: 0.5rem;
   color: #ddd;
-}
-
-.service-block .btn {
-  margin-top: 1rem;
-  background-color: #0077ff;
-  color: white;
-  padding: 0.5rem 1.2rem;
-  border-radius: 5px;
-  text-decoration: none;
-  display: inline-block;
-  transition: background 0.3s ease;
 }
 
 /* Footer */
@@ -328,8 +310,8 @@ footer {
 }
 
 footer h4 {
-  margin-bottom: 0.5rem;
   color: #fff;
+  margin-bottom: 0.5rem;
 }
 
 footer a {
@@ -374,18 +356,4 @@ footer .copyright {
   .hero-overlay p {
     font-size: 1rem;
   }
-}
-
-/* Image Positioning Fix */
-.focus-lower-signage {
-  object-position: center 75%;
-}
-
-/* Anchor Scroll Offset Fix */
-[id]::before {
-  content: "";
-  display: block;
-  height: 100px;
-  margin-top: -100px;
-  visibility: hidden;
 }
