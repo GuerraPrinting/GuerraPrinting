@@ -291,5 +291,5 @@ footer .copyright {
 }
 /* Reposition signage image */
 .focus-lower-signage {
-  object-position: center bottom;
+  object-position: center 75%;
 }
