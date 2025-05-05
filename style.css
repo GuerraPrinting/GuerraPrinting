@@ -14,8 +14,9 @@ body {
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-padding-top: 120px;
 }
+
 
 h1, h2, h3, .hero-overlay h1 {
   font-family: 'Bebas Neue', sans-serif;
