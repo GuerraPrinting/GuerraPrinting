@@ -7,10 +7,11 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  
   <!-- Header -->
   <header>
     <div class="logo">
-      <img src="logo.png" alt="Guerra Printing Logo" />
+      <img src="logo.png" alt="Guerra Printing Logo">
     </div>
     <nav>
       <ul>
@@ -30,47 +31,52 @@
     </nav>
   </header>
 
-  <!-- Hero Slideshow -->
+  <!-- Hero Section -->
   <section class="hero">
-    <img src="hero1.jpeg" class="slide-img" style="opacity: 1; object-position: center 70%;">
-    <img src="hero2.jpeg" class="slide-img">
-    <img src="hero3.jpeg" class="slide-img">
+    <img src="hero1.jpg" class="slide-img" style="opacity: 1;">
+    <img src="hero2.jpg" class="slide-img">
+    <img src="hero3.jpg" class="slide-img">
     <div class="hero-overlay">
-      <h1>Custom Printing in Chicago</h1>
-      <p>From Apparel to Signage — Your One-Stop Print Shop</p>
-      <a href="services.html" class="btn">Explore Services</a>
+      <h1>Custom Printing for Teams, Events & Business</h1>
+      <p>From branded uniforms to event signage — we specialize in bulk printing that scales with your needs.</p>
+      <a href="contact.html" class="btn">Request a Business Quote</a>
     </div>
   </section>
 
-  <!-- Highlighted Services Grid -->
-  <section class="services-grid" style="padding: 4rem 2rem;">
-    <div class="service-item">
-      <img src="Apparel.jpeg" alt="Custom Apparel">
-      <h3>👕 Apparel</h3>
-      <p>Embroidery, screen printing, and vinyl customization for hats, hoodies, and more.</p>
-      <a href="services.html#apparel" class="btn">Shop Apparel</a>
-    </div>
+  <!-- Services Overview -->
+  <section class="services-overview">
+    <h1>Scalable Printing Solutions</h1>
+    <p>We help businesses, teams, and event organizers bring their brand to life with high-volume printing, apparel, signage, and more.</p>
+  </section>
 
+  <!-- Services Grid -->
+  <section class="services-grid">
     <div class="service-item">
-      <img src="Paper_Goods.jpeg" alt="Paper Goods">
-      <h3>📄 Paper Goods</h3>
-      <p>Business cards, flyers, invoices, and menus — all printed crisp and clean.</p>
-      <a href="services.html#paper" class="btn">View Paper Products</a>
+      <img src="img/apparel.jpg" alt="Uniforms">
+      <h3>Uniforms & Branded Apparel</h3>
+      <p>Perfect for staff, teams, or company merch — embroidery, vinyl, screen printing & more.</p>
     </div>
+    <div class="service-item">
+      <img src="img/paper.jpg" alt="Paper Materials">
+      <h3>Marketing & Office Materials</h3>
+      <p>Flyers, business cards, invoices, menus — everything your operation runs on.</p>
+    </div>
+    <div class="service-item">
+      <img src="img/signage.jpg" alt="Signs and Wraps">
+      <h3>Event & Storefront Signage</h3>
+      <p>Large banners, yard signs, window perf, and vehicle wraps for bold visibility.</p>
+    </div>
+    <div class="service-item">
+      <img src="img/specialty.jpg" alt="Promotional Items">
+      <h3>Promo Gear & Giveaways</h3>
+      <p>Custom hats, stickers, magnets & more for your next event or marketing campaign.</p>
+    </div>
+  </section>
 
-    <div class="service-item">
-      <img src="Signage.jpeg" class="focus-lower-signage" alt="Signage">
-      <h3>🪧 Signage</h3>
-      <p>Banners, wraps, decals, and vinyl — signage that makes your message pop.</p>
-      <a href="services.html#signs" class="btn">Explore Signs</a>
-    </div>
-
-    <div class="service-item">
-      <img src="specialty-preview.png" alt="Specialty Items">
-      <h3>🎁 Specialty</h3>
-      <p>Stickers, magnets, branded gifts — the small things that leave a big impression.</p>
-      <a href="services.html#specialty" class="btn">Custom Items</a>
-    </div>
+  <!-- Who We Work With -->
+  <section class="services-overview">
+    <h2>Who We Work With</h2>
+    <p>Restaurants • Events • Schools • Construction Crews • Barbers • Retail • Churches • Real Estate Offices</p>
   </section>
 
   <!-- Footer -->
@@ -81,42 +87,33 @@
         <p>📍 Chicago, IL</p>
         <p>📞 (773) 457-0928</p>
         <p>📧 info@gueraprinting.com</p>
-        <p><strong> Business Hours:</strong><br>
-          Mon–Fri: 10am–6pm<br>
-          Sat: 10am–3pm<br>
-          Sun: 11am–3pm
-        </p>
+        <p><strong>Business Hours:</strong><br>Mon–Fri: 10am–6pm<br>Sat: 10am–3pm<br>Sun: 11am–3pm</p>
       </div>
       <div>
         <h4>Follow Us</h4>
-        <a href="https://www.instagram.com/guerra_printing/" target="_blank">Instagram</a><br>
+        <a href="https://www.instagram.com/guerra_printing/" target="_blank">Instagram</a>
         <a href="https://www.tiktok.com/@guerraprinting1" target="_blank">TikTok</a>
       </div>
       <div>
         <h4>Quick Links</h4>
-        <a href="services.html">Services</a><br>
-        <a href="about.html">About Us</a><br>
+        <a href="services.html">Services</a>
+        <a href="about.html">About Us</a>
         <a href="contact.html">Contact</a>
       </div>
     </div>
     <p class="copyright">© 2025 Guerra Printing. All rights reserved.</p>
   </footer>
 
-  <!-- JavaScript for Hero Slideshow -->
+  <!-- Slideshow Script -->
   <script>
     const slides = document.querySelectorAll('.slide-img');
     let current = 0;
-
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.style.opacity = i === index ? '1' : '0';
-      });
-    }
-
     setInterval(() => {
+      slides[current].style.opacity = 0;
       current = (current + 1) % slides.length;
-      showSlide(current);
+      slides[current].style.opacity = 1;
     }, 4000);
   </script>
+
 </body>
 </html>
