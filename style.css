@@ -162,6 +162,7 @@ nav a:hover {
   max-width: 700px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 0.5rem;
 }
 
@@ -169,7 +170,7 @@ nav a:hover {
   font-size: 2.6rem;
   font-weight: 800;
   line-height: 1.2;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 .hero-text-wrapper p {
@@ -177,6 +178,8 @@ nav a:hover {
   line-height: 1.6;
   max-width: 650px;
   margin: 1rem auto 0;
+  color: #f0f0f0;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
 }
 
 .hero-buttons {
