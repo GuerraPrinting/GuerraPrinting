@@ -23,7 +23,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #1e1e1e;
+  background: #111;
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
@@ -31,13 +31,13 @@ header {
 }
 
 .logo img {
-  height: 65px;
+  height: 60px;
 }
 
 nav ul {
   display: flex;
   list-style: none;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 nav li {
@@ -45,16 +45,15 @@ nav li {
 }
 
 nav a {
-  color: white;
+  color: #fff;
   text-decoration: none;
-  padding: 0.5rem 1rem;
-  display: inline-block;
-  transition: background 0.3s;
+  padding: 0.5rem 0.8rem;
+  transition: background 0.3s, color 0.3s;
+  border-radius: 4px;
 }
 
 nav a:hover {
   background: #333;
-  border-radius: 4px;
 }
 
 /* Dropdown */
@@ -63,118 +62,78 @@ nav a:hover {
   position: absolute;
   top: 100%;
   left: 0;
-  background: #1e1e1e;
-  min-width: 180px;
+  background: #222;
   flex-direction: column;
-  padding: 0.5rem 0;
+  min-width: 180px;
   z-index: 999;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .dropdown-content a {
   padding: 0.5rem 1rem;
+  color: #fff;
   white-space: nowrap;
 }
 
 .dropdown:hover .dropdown-content {
   display: flex;
-  flex-direction: column;
-}
-
-/* Language Toggle */
-.lang-toggle {
-  text-align: right;
-  padding: 0.5rem 2rem;
-  background: #f5f5f5;
-}
-
-.lang-toggle.bottom {
-  text-align: center;
-  background: #111;
-  padding: 0.75rem;
-}
-
-.lang-toggle button {
-  margin-left: 0.5em;
-  padding: 0.4rem 1rem;
-  background: #1e1e1e;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.lang-toggle.bottom button {
-  background: #fff;
-  color: #111;
-  margin: 0 0.5rem;
-}
-
-.lang-toggle.bottom button:hover {
-  background: #ddd;
-}
-
-.lang-toggle button:hover {
-  background: #444;
-}
-
-.lang {
-  display: none;
 }
 
 /* Hero Section */
 .hero {
   position: relative;
-  height: 80vh;
+  height: 85vh;
   overflow: hidden;
 }
 
 .slide-img {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  top: 0;
+  left: 0;
   opacity: 0;
   transition: opacity 1s ease-in-out;
-  z-index: 0;
 }
 
 .hero-overlay {
   position: relative;
   z-index: 1;
   background: rgba(0, 0, 0, 0.6);
-  color: white;
+  color: #fff;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 2rem;
 }
 
 .hero-text-wrapper {
-  max-width: 650px;
-  padding: 1rem 1.5rem;
+  max-width: 700px;
 }
 
 .hero-text-wrapper h1 {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
 }
 
 .hero-text-wrapper p {
-  font-size: 1rem;
-  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  margin-top: 0.75rem;
 }
 
 .hero .btn {
   display: inline-block;
-  margin-top: 1.5em;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
   background-color: #ff4c4c;
   color: white;
-  padding: 0.75em 1.5em;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
+  font-weight: bold;
   text-decoration: none;
+  transition: background 0.3s ease;
 }
 
 .hero .btn:hover {
@@ -186,16 +145,21 @@ nav a:hover {
   padding: 3rem 2rem;
 }
 
-.services-overview h1, .services-overview h2 {
+.services-overview h1,
+.services-overview h2 {
   text-align: center;
+  font-size: 2rem;
   margin-bottom: 1rem;
 }
 
 .services-overview p {
   text-align: center;
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-/* Zigzag Grid */
+/* Services Grid */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -204,46 +168,41 @@ nav a:hover {
 }
 
 .service-item {
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
   background: #f9f9f9;
   border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-item:hover {
   transform: scale(1.02);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .service-item img {
   width: 100%;
   height: auto;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  display: block;
 }
 
-.service-item h3, .service-item p {
+.service-item h3,
+.service-item p {
   padding: 1rem;
-  margin: 0;
-}
-
-.services-grid .service-item:nth-child(even) {
-  transform: translateY(20px);
 }
 
 /* Footer */
 footer {
-  background: #1e1e1e;
-  color: white;
+  background: #111;
+  color: #eee;
   padding: 3rem 2rem;
+  font-size: 0.95rem;
 }
 
 .footer-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
   justify-content: space-between;
+  gap: 2rem;
 }
 
 .footer-grid div {
@@ -251,15 +210,16 @@ footer {
 }
 
 footer a {
-  color: #ddd;
+  color: #ccc;
   text-decoration: none;
   display: flex;
   align-items: center;
-  margin: 0.5rem 0;
+  margin: 0.4rem 0;
+  transition: color 0.3s;
 }
 
 footer a:hover {
-  color: white;
+  color: #fff;
 }
 
 footer a img {
@@ -268,56 +228,47 @@ footer a img {
   margin-right: 0.5rem;
 }
 
+.lang-toggle.bottom {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.lang-toggle.bottom button {
+  background: #fff;
+  color: #111;
+  padding: 0.6rem 1.2rem;
+  margin: 0 0.5rem;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.lang-toggle.bottom button:hover {
+  background: #e0e0e0;
+}
+
 footer p {
   margin-top: 2rem;
   text-align: center;
   font-size: 0.9rem;
 }
-"""
 
-responsive_css = """
-/* Mobile Responsive Adjustments */
+/* Responsive */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
     align-items: flex-start;
-    padding: 1rem;
-  }
-
-  .logo img {
-    height: 55px;
-    margin-bottom: 0.5rem;
   }
 
   nav ul {
     flex-direction: column;
-    gap: 0;
     width: 100%;
-  }
-
-  nav ul li {
-    width: 100%;
-  }
-
-  nav ul li a {
-    width: 100%;
-    padding: 0.75rem 1rem;
-  }
-
-  .dropdown-content {
-    position: relative;
-    background: #2c2c2c;
-    padding: 0;
-    box-shadow: none;
   }
 
   .hero {
     height: 70vh;
-  }
-
-  .hero-text-wrapper {
-    padding: 1rem;
-    max-width: 90%;
   }
 
   .hero-text-wrapper h1 {
@@ -330,21 +281,14 @@ responsive_css = """
 
   .services-grid {
     grid-template-columns: 1fr;
-    padding: 1rem;
   }
 
   .footer-grid {
     flex-direction: column;
-    gap: 1.5rem;
     text-align: center;
   }
 
   footer a {
     justify-content: center;
-  }
-
-  .lang-toggle.bottom {
-    flex-direction: column;
-    gap: 0.5rem;
   }
 }
