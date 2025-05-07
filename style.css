@@ -87,6 +87,12 @@ nav a:hover {
   background: #f5f5f5;
 }
 
+.lang-toggle.bottom {
+  text-align: center;
+  background: #111;
+  padding: 0.75rem;
+}
+
 .lang-toggle button {
   margin-left: 0.5em;
   padding: 0.4rem 1rem;
@@ -95,6 +101,16 @@ nav a:hover {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.lang-toggle.bottom button {
+  background: #fff;
+  color: #111;
+  margin: 0 0.5rem;
+}
+
+.lang-toggle.bottom button:hover {
+  background: #ddd;
 }
 
 .lang-toggle button:hover {
@@ -137,17 +153,17 @@ nav a:hover {
 }
 
 .hero-text-wrapper {
-  max-width: 750px;
-  padding: 2rem;
+  max-width: 650px;
+  padding: 1rem 1.5rem;
 }
 
 .hero-text-wrapper h1 {
-  font-size: 2.8rem;
+  font-size: 2.2rem;
 }
 
 .hero-text-wrapper p {
-  margin-top: 1rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  margin-top: 0.5rem;
 }
 
 .hero .btn {
@@ -173,6 +189,10 @@ nav a:hover {
 .services-overview h1, .services-overview h2 {
   text-align: center;
   margin-bottom: 1rem;
+}
+
+.services-overview p {
+  text-align: center;
 }
 
 /* Zigzag Grid */
@@ -208,7 +228,6 @@ nav a:hover {
   margin: 0;
 }
 
-/* Zigzag layout */
 .services-grid .service-item:nth-child(even) {
   transform: translateY(20px);
 }
@@ -253,4 +272,79 @@ footer p {
   margin-top: 2rem;
   text-align: center;
   font-size: 0.9rem;
+}
+"""
+
+responsive_css = """
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .logo img {
+    height: 55px;
+    margin-bottom: 0.5rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  nav ul li a {
+    width: 100%;
+    padding: 0.75rem 1rem;
+  }
+
+  .dropdown-content {
+    position: relative;
+    background: #2c2c2c;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .hero {
+    height: 70vh;
+  }
+
+  .hero-text-wrapper {
+    padding: 1rem;
+    max-width: 90%;
+  }
+
+  .hero-text-wrapper h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-text-wrapper p {
+    font-size: 1rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .footer-grid {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  footer a {
+    justify-content: center;
+  }
+
+  .lang-toggle.bottom {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
