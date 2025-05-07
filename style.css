@@ -212,7 +212,7 @@ nav a:hover {
 .services-overview h1,
 .services-overview h2 {
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .services-overview p {
