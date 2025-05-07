@@ -37,7 +37,7 @@ header {
 }
 
 .logo img {
-  height: 80px;
+  height: 60px;
 }
 
 nav {
@@ -103,6 +103,9 @@ nav a:hover {
 .lang-toggle.bottom {
   margin-top: 2rem;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .lang-toggle button {
@@ -165,8 +168,6 @@ nav a:hover {
 .hero-text-wrapper h1 {
   font-size: 2.5rem;
   font-weight: bold;
-  line-height: 1.3;
-  margin-bottom: 0.5rem;
 }
 
 .hero-text-wrapper p {
@@ -255,12 +256,15 @@ footer {
 .footer-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 2rem;
+  justify-content: center;
+  text-align: center;
+  gap: 3rem;
 }
 
 .footer-grid div {
-  flex: 1 1 250px;
+  min-width: 200px;
+  max-width: 300px;
+  flex: 1;
 }
 
 footer a {
@@ -270,6 +274,7 @@ footer a {
   align-items: center;
   margin: 0.4rem 0;
   transition: color 0.3s;
+  justify-content: center;
 }
 
 footer a:hover {
