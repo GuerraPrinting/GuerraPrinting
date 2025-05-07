@@ -1,4 +1,4 @@
-/* Reset & Global Styles */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -23,33 +23,37 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 2em;
-  background-color: #1e1e1e;
-  color: #fff;
+  background: #1e1e1e;
+  padding: 1rem 2rem;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
 .logo img {
-  height: 50px;
+  height: 65px;
 }
 
 nav ul {
   display: flex;
   list-style: none;
-  gap: 1em;
+  gap: 1.5rem;
+}
+
+nav li {
+  position: relative;
 }
 
 nav a {
+  color: white;
   text-decoration: none;
-  color: #fff;
-  padding: 0.5em;
+  padding: 0.5rem 1rem;
+  display: inline-block;
   transition: background 0.3s;
 }
 
 nav a:hover {
-  background-color: #444;
+  background: #333;
   border-radius: 4px;
 }
 
@@ -57,13 +61,48 @@ nav a:hover {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #1e1e1e;
-  padding: 0.5em;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  top: 100%;
+  left: 0;
+  background: #1e1e1e;
+  min-width: 180px;
+  flex-direction: column;
+  padding: 0.5rem 0;
+  z-index: 999;
+}
+
+.dropdown-content a {
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
 }
 
 .dropdown:hover .dropdown-content {
-  display: block;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Language Toggle */
+.lang-toggle {
+  text-align: right;
+  padding: 0.5rem 2rem;
+  background: #f5f5f5;
+}
+
+.lang-toggle button {
+  margin-left: 0.5em;
+  padding: 0.4rem 1rem;
+  background: #1e1e1e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.lang-toggle button:hover {
+  background: #444;
+}
+
+.lang {
+  display: none;
 }
 
 /* Hero Section */
@@ -88,20 +127,26 @@ nav a:hover {
 .hero-overlay {
   position: relative;
   z-index: 1;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.6);
   color: white;
-  padding: 2em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
-.hero-overlay h1 {
-  font-size: 2.5rem;
+.hero-text-wrapper {
+  max-width: 750px;
+  padding: 2rem;
 }
 
-.hero-overlay p {
-  margin-top: 1em;
+.hero-text-wrapper h1 {
+  font-size: 2.8rem;
+}
+
+.hero-text-wrapper p {
+  margin-top: 1rem;
   font-size: 1.2rem;
 }
 
@@ -120,90 +165,92 @@ nav a:hover {
   background-color: #e03b3b;
 }
 
-/* Sections */
+/* Services Overview */
 .services-overview {
-  text-align: center;
-  padding: 2em 1em;
+  padding: 3rem 2rem;
 }
 
 .services-overview h1, .services-overview h2 {
-  margin-bottom: 0.5em;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
+/* Zigzag Grid */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5em;
-  padding: 2em;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
 }
 
 .service-item {
-  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background: #f9f9f9;
+  border-radius: 10px;
+}
+
+.service-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .service-item img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.service-item h3, .service-item p {
+  padding: 1rem;
+  margin: 0;
+}
+
+/* Zigzag layout */
+.services-grid .service-item:nth-child(even) {
+  transform: translateY(20px);
 }
 
 /* Footer */
 footer {
-  background-color: #1e1e1e;
+  background: #1e1e1e;
   color: white;
-  padding: 2em;
+  padding: 3rem 2rem;
 }
 
 .footer-grid {
   display: flex;
   flex-wrap: wrap;
+  gap: 2rem;
   justify-content: space-between;
-  gap: 2em;
 }
 
 .footer-grid div {
-  flex: 1;
-  min-width: 200px;
+  flex: 1 1 250px;
 }
 
 footer a {
   color: #ddd;
-  display: block;
-  margin: 0.5em 0;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
 }
 
 footer a:hover {
   color: white;
 }
 
+footer a img {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5rem;
+}
+
 footer p {
-  margin-top: 1em;
+  margin-top: 2rem;
   text-align: center;
-}
-
-/* Language Toggle */
-.lang-toggle {
-  text-align: right;
-  padding: 0.5em 2em;
-  background: #f5f5f5;
-}
-
-.lang-toggle button {
-  margin-left: 0.5em;
-  padding: 0.5em 1em;
-  background: #1e1e1e;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.lang-toggle button:hover {
-  background: #444;
-}
-
-/* Language visibility */
-.lang {
-  display: none;
+  font-size: 0.9rem;
 }
