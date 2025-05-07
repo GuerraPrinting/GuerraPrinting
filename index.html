@@ -1,39 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Guerra Printing | Home</title>
-  <link rel="stylesheet" href="style.css">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Guerra Printing",
-  "url": "https://www.gueraprinting.com",
-  "telephone": "(312) 123-4567",
-  "email": "guerra@gueraprinting.com",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Chicago",
-    "addressRegion": "IL",
-    "postalCode": "60632"
+  <link rel="stylesheet" href="style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Guerra Printing",
+    "url": "https://www.gueraprinting.com",
+    "telephone": "(312) 123-4567",
+    "email": "guerra@gueraprinting.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Chicago",
+      "addressRegion": "IL",
+      "postalCode": "60632"
+    }
   }
-}
-</script>
+  </script>
 </head>
-<body>
-  
+<body class="fade-in">
+
+  <!-- Language Toggle -->
+  <div class="lang-toggle">
+    <button onclick="setLanguage('en')">English</button>
+    <button onclick="setLanguage('es')">Español</button>
+  </div>
+
   <!-- Header -->
   <header>
     <div class="logo">
-      <img src="logo.png" alt="Guerra Printing Logo">
+      <img src="logo.png" alt="Guerra Printing Logo" />
     </div>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" class="lang en">Home</a><a href="index.html" class="lang es">Inicio</a></li>
         <li class="dropdown">
-          <a href="services.html">Services</a>
+          <a href="services.html" class="lang en">Services</a><a href="services.html" class="lang es">Servicios</a>
           <div class="dropdown-content">
             <a href="services.html#apparel">Apparel</a>
             <a href="services.html#paper">Paper Products</a>
@@ -41,57 +47,71 @@
             <a href="services.html#specialty">Specialty Items</a>
           </div>
         </li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html" class="lang en">About</a><a href="about.html" class="lang es">Nosotros</a></li>
+        <li><a href="contact.html" class="lang en">Contact</a><a href="contact.html" class="lang es">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="hero">
-    <img src="hero1.jpeg" class="slide-img" style="opacity: 1;">
-    <img src="hero2.jpeg" class="slide-img">
-    <img src="hero3.jpeg" class="slide-img">
+    <img src="hero1.jpeg" class="slide-img" style="opacity: 1;" />
+    <img src="hero2.jpeg" class="slide-img" />
+    <img src="hero3.jpeg" class="slide-img" />
     <div class="hero-overlay">
-      <h1>Custom Printing — Big or Small, We Print It All</h1>
-      <p>From single custom pieces to bulk event and business orders, Guerra Printing delivers high-quality results tailored to your needs.</p>
-      <a href="contact.html" class="btn">Start Your Order</a>
+      <h1 class="lang en">Custom Printing — Big or Small, We Print It All</h1>
+      <h1 class="lang es">Impresión Personalizada — Grande o Pequeña, Lo Imprimimos Todo</h1>
+      <p class="lang en">From single custom pieces to bulk event and business orders, Guerra Printing delivers high-quality results tailored to your needs.</p>
+      <p class="lang es">Desde piezas únicas hasta pedidos para eventos y negocios, Guerra Printing ofrece resultados de alta calidad hechos a tu medida.</p>
+      <a href="contact.html" class="btn lang en">Start Your Order</a>
+      <a href="contact.html" class="btn lang es">Haz tu Pedido</a>
     </div>
   </section>
 
-  <!-- Services Overview -->
+  <!-- Overview -->
   <section class="services-overview">
-    <h1>Printing That Scales With You</h1>
-    <p>Whether you're launching a brand, outfitting a team, or planning an event — we offer apparel, signage, and promotional materials with both small batch and bulk-friendly options.</p>
+    <h1 class="lang en">Printing That Scales With You</h1>
+    <h1 class="lang es">Impresiones Que Crecen Contigo</h1>
+    <p class="lang en">Whether you're launching a brand, outfitting a team, or planning an event — we offer apparel, signage, and promotional materials with both small batch and bulk-friendly options.</p>
+    <p class="lang es">Lanzando una marca, vistiendo a tu equipo o planeando un evento — ofrecemos ropa, señalización y artículos promocionales para cualquier escala.</p>
   </section>
 
   <!-- Services Grid -->
   <section class="services-grid">
     <div class="service-item">
-      <img src="Apparel.jpeg" alt="Uniforms">
-      <h3>Apparel & Uniforms</h3>
-      <p>From solo t-shirt prints to full team sets — embroidery, vinyl, and screen printing made easy.</p>
+      <img src="Apparel.jpeg" alt="Uniforms" />
+      <h3 class="lang en">Apparel & Uniforms</h3>
+      <h3 class="lang es">Ropa y Uniformes</h3>
+      <p class="lang en">From solo t-shirt prints to full team sets — embroidery, vinyl, and screen printing made easy.</p>
+      <p class="lang es">Desde camisetas individuales hasta uniformes — bordado, vinil y serigrafía sin complicaciones.</p>
     </div>
     <div class="service-item">
-      <img src="img/paper.jpg" alt="Paper Materials">
-      <h3>Business & Marketing Materials</h3>
-      <p>Flyers, menus, invoices, brochures — we print what keeps your business moving.</p>
+      <img src="img/paper.jpg" alt="Paper Materials" />
+      <h3 class="lang en">Business & Marketing Materials</h3>
+      <h3 class="lang es">Material de Negocios y Marketing</h3>
+      <p class="lang en">Flyers, menus, invoices, brochures — we print what keeps your business moving.</p>
+      <p class="lang es">Volantes, menús, facturas, folletos — imprimimos lo que mueve tu negocio.</p>
     </div>
     <div class="service-item">
-      <img src="Signage.jpeg" alt="Signs and Wraps">
-      <h3>Signs & Displays</h3>
-      <p>Banners, storefront graphics, yard signs and wraps — built to get you noticed.</p>
+      <img src="Signage.jpeg" alt="Signs and Wraps" />
+      <h3 class="lang en">Signs & Displays</h3>
+      <h3 class="lang es">Letreros y Exhibiciones</h3>
+      <p class="lang en">Banners, storefront graphics, yard signs and wraps — built to get you noticed.</p>
+      <p class="lang es">Banners, gráficos de escaparate, rótulos y viniles — hechos para destacar.</p>
     </div>
     <div class="service-item">
-      <img src="img/specialty.jpg" alt="Promotional Items">
-      <h3>Stickers, Merch & More</h3>
-      <p>Promotional items for pop-ups, giveaways, and everyday branding — large or small runs welcome.</p>
+      <img src="img/specialty.jpg" alt="Promotional Items" />
+      <h3 class="lang en">Stickers, Merch & More</h3>
+      <h3 class="lang es">Stickers, Merch y Más</h3>
+      <p class="lang en">Promotional items for pop-ups, giveaways, and everyday branding — large or small runs welcome.</p>
+      <p class="lang es">Artículos promocionales para eventos, regalos o marca diaria — grandes o pequeños pedidos.</p>
     </div>
   </section>
 
-  <!-- Who We Work With -->
+  <!-- Clients -->
   <section class="services-overview">
-    <h2>Trusted by Local Brands & Events</h2>
+    <h2 class="lang en">Trusted by Local Brands & Events</h2>
+    <h2 class="lang es">Confiado por Marcas y Eventos Locales</h2>
     <p>Startups • Restaurants • Schools • Contractors • Barbers • Artists • Churches • Festivals • Corporate Teams</p>
   </section>
 
@@ -103,7 +123,7 @@
         <p>📍 Chicago, IL</p>
         <p>📞 (773) 457-0928</p>
         <p>📧 guerraprinting@gmail.com</p>
-        <p><strong>Business Hours:</strong><br>Mon–Fri: 10am–6pm<br>Sat: 10am–3pm<br>Sun: 11am–3pm</p>
+        <p><strong>Business Hours:</strong><br />Mon–Fri: 10am–6pm<br />Sat: 10am–3pm<br />Sun: 11am–3pm</p>
       </div>
       <div>
         <h4>Follow Us</h4>
@@ -120,8 +140,16 @@
     <p class="copyright">© 2025 Guerra Printing. All rights reserved.</p>
   </footer>
 
-  <!-- Slideshow Script -->
+  <!-- Scripts -->
   <script>
+    // Language toggle
+    function setLanguage(lang) {
+      document.querySelectorAll('.lang').forEach(el => el.style.display = 'none');
+      document.querySelectorAll('.' + lang).forEach(el => el.style.display = 'inline');
+    }
+    setLanguage('en'); // Default
+
+    // Slideshow
     const slides = document.querySelectorAll('.slide-img');
     let current = 0;
     setInterval(() => {
@@ -130,6 +158,5 @@
       slides[current].style.opacity = 1;
     }, 4000);
   </script>
-
 </body>
 </html>
