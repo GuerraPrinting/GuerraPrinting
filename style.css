@@ -78,7 +78,7 @@ nav a:hover {
   flex-direction: column;
   min-width: 180px;
   z-index: 999;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .dropdown-content a {
@@ -123,6 +123,7 @@ nav a:hover {
   background: #e0e0e0;
 }
 
+/* Only hide language content by default */
 .lang {
   display: none;
 }
@@ -179,7 +180,7 @@ nav a:hover {
   max-width: 650px;
   margin: 1rem auto 0;
   color: #f0f0f0;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
 }
 
 .hero-buttons {
@@ -203,56 +204,57 @@ nav a:hover {
   background-color: #e03b3b;
 }
 
-/* === Services Overview === */
-.services-overview {
-  padding: 3rem 2rem;
+/* === Shared About / Contact Section Styles === */
+.about-section {
   text-align: center;
-}
-
-.services-overview h1,
-.services-overview h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.services-overview p {
-  font-size: 1.1rem;
+  padding: 3rem 2rem;
   max-width: 800px;
   margin: 0 auto;
 }
 
-/* === Services Grid === */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
-}
-
-.service-item {
-  background: #f9f9f9;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-item:hover {
-  transform: scale(1.02);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-.service-item img {
-  width: 100%;
-  height: auto;
+.about-section h2 {
   display: block;
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
 }
 
-.service-item h3,
-.service-item p {
-  padding: 1rem;
+.section-caption {
+  display: block;
+  width: 100%;
+  margin-bottom: 2rem;
+  color: #555;
+  font-size: 1.05rem;
+  line-height: 1.6;
 }
 
-/* === Services Page Vertical Layout === */
+/* Buttons (e.g., social or form) */
+.about-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.about-buttons .btn {
+  padding: 0.6rem 1.4rem;
+  background-color: #111;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.about-buttons .btn:hover {
+  background-color: #333;
+}
+
+/* === Services Page Layout === */
 .services-page {
   padding: 2rem 1rem;
 }
@@ -286,52 +288,6 @@ nav a:hover {
   margin-bottom: 1rem;
 }
 
-/* === Shared About / Contact Styling === */
-.about-section {
-  text-align: center;
-  padding: 3rem 2rem;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.about-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  font-weight: 800;
-}
-
-.section-caption {
-  font-size: 1.05rem;
-  color: #555;
-  max-width: 700px;
-  margin: 0 auto 1.5rem;
-  line-height: 1.5;
-}
-
-.about-buttons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.about-buttons .btn {
-  padding: 0.6rem 1.4rem;
-  background-color: #111;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background 0.3s ease;
-}
-
-.about-buttons .btn:hover {
-  background-color: #333;
-}
-
 /* === List Reset === */
 ul {
   list-style: none;
@@ -339,8 +295,7 @@ ul {
   margin: 0;
 }
 
-.about-section ul li,
-.contact-section ul li {
+.about-section ul li {
   text-align: center;
   font-weight: 500;
   margin-bottom: 0.5rem;
@@ -423,10 +378,6 @@ footer p {
     font-size: 1rem;
   }
 
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-
   .footer-grid {
     flex-direction: column;
     text-align: center;
@@ -447,11 +398,11 @@ footer p {
     gap: 0.5rem;
   }
 
-  .service-block {
-    padding: 0 1rem;
-  }
-
   .about-buttons {
     flex-direction: column;
+  }
+
+  .service-block {
+    padding: 0 1rem;
   }
 }
