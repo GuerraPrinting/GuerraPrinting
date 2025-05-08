@@ -6,7 +6,7 @@
   <title>Contact Us | Guerra Printing</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="fade-in">
 
   <!-- Header -->
   <header>
@@ -15,44 +15,58 @@
     </div>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" class="lang en">Home</a><a href="index.html" class="lang es">Inicio</a></li>
         <li class="dropdown">
-          <a href="services.html">Services</a>
+          <a href="services.html" class="lang en">Services</a><a href="services.html" class="lang es">Servicios</a>
           <div class="dropdown-content">
-            <a href="services.html#apparel">Apparel</a>
-            <a href="services.html#paper">Paper Products</a>
-            <a href="services.html#signs">Signage</a>
-            <a href="services.html#specialty">Specialty Items</a>
+            <a href="services.html#apparel" class="lang en">Apparel</a>
+            <a href="services.html#apparel" class="lang es">Ropa</a>
+            <a href="services.html#paper" class="lang en">Paper Products</a>
+            <a href="services.html#paper" class="lang es">Productos de Papel</a>
+            <a href="services.html#signs" class="lang en">Signage</a>
+            <a href="services.html#signs" class="lang es">Letreros</a>
+            <a href="services.html#specialty" class="lang en">Specialty Items</a>
+            <a href="services.html#specialty" class="lang es">Artículos Especiales</a>
           </div>
         </li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html" class="lang en">About</a><a href="about.html" class="lang es">Nosotros</a></li>
+        <li><a href="contact.html" class="lang en">Contact</a><a href="contact.html" class="lang es">Contacto</a></li>
       </ul>
     </nav>
+    <div class="lang-toggle top">
+      <button onclick="setLanguage('en')">EN</button>
+      <button onclick="setLanguage('es')">ES</button>
+    </div>
   </header>
 
-  <!-- Contact Section -->
+  <!-- Contact Intro -->
   <section class="services-overview">
-    <h1>Get in Touch</h1>
-    <p>Questions? Custom orders? Need a quote? Let us know!</p>
+    <h1 class="lang en">Get in Touch</h1>
+    <h1 class="lang es">Contáctanos</h1>
+    <p class="lang en">Questions? Custom orders? Need a quote? Let us know!</p>
+    <p class="lang es">¿Preguntas? ¿Pedidos personalizados? ¿Necesitas una cotización? ¡Cuéntanos!</p>
   </section>
 
+  <!-- Contact Details -->
   <section class="services-vertical">
     <div class="service-block">
       <div class="service-text">
-        <h2>📞 Contact Info</h2>
+        <h2 class="lang en">📞 Contact Info</h2>
+        <h2 class="lang es">📞 Información de Contacto</h2>
         <ul>
-          <li><strong>Phone:</strong> (773) 457-0928</li>
+          <li><strong class="lang en">Phone:</strong><strong class="lang es">Teléfono:</strong> (773) 457-0928</li>
           <li><strong>Email:</strong> guerraprinting@gmail.com</li>
-          <li><strong>Location:</strong> Chicago, IL</li>
+          <li><strong class="lang en">Location:</strong><strong class="lang es">Ubicación:</strong> Chicago, IL</li>
         </ul>
       </div>
     </div>
 
     <div class="service-block">
       <div class="service-text">
-        <h2>📲 Follow Us</h2>
-        <p>Stay updated on new drops, behind-the-scenes printing, and client shout-outs.</p>
+        <h2 class="lang en">📲 Follow Us</h2>
+        <h2 class="lang es">📲 Síguenos</h2>
+        <p class="lang en">Stay updated on new drops, behind-the-scenes printing, and client shout-outs.</p>
+        <p class="lang es">Mantente al día con nuevos diseños, procesos de impresión y destacados de clientes.</p>
         <p>
           <a href="https://www.instagram.com/guerra_printing/" target="_blank" class="btn">Instagram</a>
           <a href="https://www.tiktok.com/@guerraprinting1" target="_blank" class="btn">TikTok</a>
@@ -62,24 +76,33 @@
 
     <div class="service-block">
       <div class="service-text">
-        <h2>⏰ Business Hours</h2>
-        <ul>
-          <li>Mon–Fri: 10am–6pm</li>
-          <li>Sat: 10am–3pm</li>
-          <li>Sun: 11am–3pm</li>
+        <h2 class="lang en">⏰ Business Hours</h2>
+        <h2 class="lang es">⏰ Horario</h2>
+        <ul class="lang en">
+          <li>Mon–Fri: 10:00am–6:00pm</li>
+          <li>Sat: 10:00am–3:00pm</li>
+          <li>Sun: 11:00am–3:00pm</li>
+        </ul>
+        <ul class="lang es">
+          <li>Lun–Vie: 10:00am–6:00pm</li>
+          <li>Sáb: 10:00am–3:00pm</li>
+          <li>Dom: 11:00am–3:00pm</li>
         </ul>
       </div>
     </div>
 
     <div class="service-block">
       <div class="service-text">
-        <h2>✉️ Send Us a Message</h2>
-        <p>Fill out the form below and we'll get back to you shortly. You can also email us directly at <strong>Guerraprinting@gmail.com</strong>.</p>
+        <h2 class="lang en">✉️ Send Us a Message</h2>
+        <h2 class="lang es">✉️ Envíanos un Mensaje</h2>
+        <p class="lang en">Fill out the form below and we'll get back to you shortly. You can also email us directly at <strong>guerraprinting@gmail.com</strong>.</p>
+        <p class="lang es">Completa el formulario y te responderemos pronto. También puedes escribirnos directamente a <strong>guerraprinting@gmail.com</strong>.</p>
         <form action="https://formspree.io/f/xwpoonoo" method="POST" style="max-width: 600px; margin: auto;">
           <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;">
           <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;">
           <textarea name="message" placeholder="Your Message" rows="5" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;"></textarea>
-          <button type="submit" class="btn">Send Message</button>
+          <button type="submit" class="btn lang en">Send Message</button>
+          <button type="submit" class="btn lang es">Enviar Mensaje</button>
         </form>
       </div>
     </div>
@@ -89,26 +112,46 @@
   <footer>
     <div class="footer-grid">
       <div>
-        <h4>Contact</h4>
+        <h4 class="lang en">Contact</h4>
+        <h4 class="lang es">Contacto</h4>
         <p>📍 Chicago, IL</p>
         <p>📞 (773) 457-0928</p>
         <p>📧 guerraprinting@gmail.com</p>
-        <p><strong>Business Hours:</strong><br>Mon–Fri: 10am–6pm<br>Sat: 10am–3pm<br>Sun: 11am–3pm</p>
+        <p class="lang en"><strong>Business Hours:</strong><br>Mon–Fri: 10:00am–6:00pm<br>Sat: 10:00am–3:00pm<br>Sun: 11:00am–3:00pm</p>
+        <p class="lang es"><strong>Horario:</strong><br>Lun–Vie: 10:00am–6:00pm<br>Sáb: 10:00am–3:00pm<br>Dom: 11:00am–3:00pm</p>
       </div>
       <div>
-        <h4>Follow Us</h4>
+        <h4 class="lang en">Follow Us</h4>
+        <h4 class="lang es">Síguenos</h4>
         <a href="https://www.instagram.com/guerra_printing/" target="_blank">Instagram</a>
         <a href="https://www.tiktok.com/@guerraprinting1" target="_blank">TikTok</a>
       </div>
       <div>
-        <h4>Quick Links</h4>
-        <a href="services.html">Services</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact</a>
+        <h4 class="lang en">Quick Links</h4>
+        <h4 class="lang es">Enlaces Rápidos</h4>
+        <a href="services.html" class="lang en">Services</a>
+        <a href="services.html" class="lang es">Servicios</a>
+        <a href="about.html" class="lang en">About Us</a>
+        <a href="about.html" class="lang es">Sobre Nosotros</a>
+        <a href="contact.html" class="lang en">Contact</a>
+        <a href="contact.html" class="lang es">Contacto</a>
       </div>
     </div>
-    <p class="copyright">© 2025 Guerra Printing. All rights reserved.</p>
+    <div class="lang-toggle bottom">
+      <button onclick="setLanguage('en')">EN</button>
+      <button onclick="setLanguage('es')">ES</button>
+    </div>
+    <p>© 2025 Guerra Printing. All rights reserved.</p>
   </footer>
+
+  <!-- Language Script -->
+  <script>
+    function setLanguage(lang) {
+      document.querySelectorAll('.lang').forEach(el => el.style.display = 'none');
+      document.querySelectorAll('.' + lang).forEach(el => el.style.display = 'inline');
+    }
+    setLanguage('en');
+  </script>
 
 </body>
 </html>
