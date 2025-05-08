@@ -37,7 +37,7 @@ header {
 }
 
 .logo img {
-  height: 90px;
+  height: 60px;
 }
 
 nav {
@@ -203,7 +203,7 @@ nav a:hover {
   background-color: #e03b3b;
 }
 
-/* Services Overview */
+/* Shared Section Styles */
 .services-overview {
   padding: 3rem 2rem;
   text-align: center;
@@ -212,7 +212,7 @@ nav a:hover {
 .services-overview h1,
 .services-overview h2 {
   font-size: 2rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 .services-overview p {
@@ -250,6 +250,50 @@ nav a:hover {
 .service-item h3,
 .service-item p {
   padding: 1rem;
+}
+
+/* Services Page Vertical Layout */
+.services-page {
+  padding: 2rem 1rem;
+}
+
+.service-block {
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.service-block img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.service-block .text {
+  max-width: 700px;
+}
+
+.service-block .text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.service-block .text p {
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+
+.service-block ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.service-block ul li {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
 }
 
 /* Footer */
@@ -351,5 +395,9 @@ footer p {
   .lang-toggle.bottom {
     flex-direction: column;
     gap: 0.5rem;
+  }
+
+  .service-block {
+    padding: 0 1rem;
   }
 }
