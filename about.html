@@ -15,9 +15,13 @@
     </div>
     <nav>
       <ul>
-        <li><a href="index.html" class="lang en">Home</a><a href="index.html" class="lang es">Inicio</a></li>
+        <li>
+          <a href="index.html" class="lang en">Home</a>
+          <a href="index.html" class="lang es">Inicio</a>
+        </li>
         <li class="dropdown">
-          <a href="services.html" class="lang en">Services</a><a href="services.html" class="lang es">Servicios</a>
+          <a href="services.html" class="lang en">Services</a>
+          <a href="services.html" class="lang es">Servicios</a>
           <div class="dropdown-content">
             <a href="services.html#apparel" class="lang en">Apparel</a>
             <a href="services.html#apparel" class="lang es">Ropa</a>
@@ -29,8 +33,14 @@
             <a href="services.html#specialty" class="lang es">Artículos Especiales</a>
           </div>
         </li>
-        <li><a href="about.html" class="lang en">About</a><a href="about.html" class="lang es">Nosotros</a></li>
-        <li><a href="contact.html" class="lang en">Contact</a><a href="contact.html" class="lang es">Contacto</a></li>
+        <li>
+          <a href="about.html" class="lang en">About</a>
+          <a href="about.html" class="lang es">Nosotros</a>
+        </li>
+        <li>
+          <a href="contact.html" class="lang en">Contact</a>
+          <a href="contact.html" class="lang es">Contacto</a>
+        </li>
       </ul>
     </nav>
     <div class="lang-toggle top">
@@ -51,7 +61,7 @@
     </p>
   </section>
 
-  <!-- Mission -->
+  <!-- Our Mission -->
   <section class="about-section">
     <h2 class="lang en">💡 Our Mission</h2>
     <h2 class="lang es">💡 Nuestra Misión</h2>
@@ -113,10 +123,18 @@
     <p>© 2025 Guerra Printing. All rights reserved.</p>
   </footer>
 
+  <!-- Language Script -->
   <script>
     function setLanguage(lang) {
       document.querySelectorAll('.lang').forEach(el => el.style.display = 'none');
-      document.querySelectorAll('.' + lang).forEach(el => el.style.display = 'inline');
+      document.querySelectorAll('.' + lang).forEach(el => {
+        const tag = el.tagName;
+        if (tag === 'P' || tag === 'H2' || tag === 'DIV' || tag === 'SECTION') {
+          el.style.display = 'block';
+        } else {
+          el.style.display = 'inline';
+        }
+      });
     }
     setLanguage('en');
   </script>
