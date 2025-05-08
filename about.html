@@ -1,12 +1,13 @@
-r<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About Us | Guerra Printing</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="fade-in">
+
   <!-- Header -->
   <header>
     <div class="logo">
@@ -14,74 +15,118 @@ r<!DOCTYPE html>
     </div>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" class="lang en">Home</a><a href="index.html" class="lang es">Inicio</a></li>
         <li class="dropdown">
-          <a href="services.html">Services</a>
+          <a href="services.html" class="lang en">Services</a><a href="services.html" class="lang es">Servicios</a>
           <div class="dropdown-content">
-            <a href="services.html#apparel">Apparel</a>
-            <a href="services.html#paper">Paper Products</a>
-            <a href="services.html#signs">Signage</a>
-            <a href="services.html#specialty">Specialty Items</a>
+            <a href="services.html#apparel" class="lang en">Apparel</a>
+            <a href="services.html#apparel" class="lang es">Ropa</a>
+            <a href="services.html#paper" class="lang en">Paper Products</a>
+            <a href="services.html#paper" class="lang es">Productos de Papel</a>
+            <a href="services.html#signs" class="lang en">Signage</a>
+            <a href="services.html#signs" class="lang es">Letreros</a>
+            <a href="services.html#specialty" class="lang en">Specialty Items</a>
+            <a href="services.html#specialty" class="lang es">Artículos Especiales</a>
           </div>
         </li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html" class="lang en">About</a><a href="about.html" class="lang es">Nosotros</a></li>
+        <li><a href="contact.html" class="lang en">Contact</a><a href="contact.html" class="lang es">Contacto</a></li>
       </ul>
     </nav>
+    <div class="lang-toggle top">
+      <button onclick="setLanguage('en')">EN</button>
+      <button onclick="setLanguage('es')">ES</button>
+    </div>
   </header>
 
   <!-- About Section -->
   <section class="services-overview">
-    <h1>About Guerra Printing</h1>
-    <p>Founded with a passion for creativity and quality, Guerra Printing is a small but mighty team serving the Chicago area with custom printing solutions for apparel, signage, paper goods, and more. We’re dedicated to helping businesses and individuals bring their ideas to life through detail, care, and craftsmanship.</p>
+    <h1 class="lang en">Who We Are</h1>
+    <h1 class="lang es">Quiénes Somos</h1>
+    <p class="lang en">
+Owned and operated by a local small business, Guerra Printing focuses on quality you can feel.
+Every piece is made with care, attention to detail, and a passion for getting it right — not just getting it done.
+    </p>
+    <p class="lang es">
+Propiedad y operado por un pequeño negocio local, Guerra Printing se enfoca en calidad que se nota.
+Cada trabajo se realiza con cuidado, atención al detalle y pasión por hacerlo bien — no solo por hacerlo rápido.
+    </p>
   </section>
 
   <section class="services-vertical">
     <div class="service-block">
       <div class="service-text">
-        <h2>📋 Our Mission</h2>
-        <ul>
-          <li>Deliver reliable, high-quality custom printing for every client.</li>
-          <li>Support small businesses, local teams, events, and creatives.</li>
-          <li>Make every order feel personal, not just professional.</li>
-        </ul>
+        <h2 class="lang en">💡 Our Mission</h2>
+        <h2 class="lang es">💡 Nuestra Misión</h2>
+        <p class="lang en">
+          To deliver affordable, high-quality prints with the flexibility of a small business and the polish of a pro shop.
+        </p>
+        <p class="lang es">
+          Entregar impresiones asequibles y de alta calidad con la flexibilidad de un negocio pequeño y el nivel de un taller profesional.
+        </p>
       </div>
     </div>
 
     <div class="service-block">
       <div class="service-text">
-        <h2>🚀 What Sets Us Apart</h2>
-        <ul>
-          <li>In-house printing with attention to detail</li>
-          <li>Quick communication and turnaround</li>
-          <li>Custom jobs tailored to your needs</li>
+        <h2 class="lang en">🤝 What Sets Us Apart</h2>
+        <h2 class="lang es">🤝 Lo Que Nos Distingue</h2>
+        <ul class="lang en">
+          <li>One-on-one customer support</li>
+          <li>In-house design assistance</li>
+        </ul>
+        <ul class="lang es">
+          <li>Atención personalizada</li>
+          <li>Asistencia con diseño incluido</li>
         </ul>
       </div>
     </div>
   </section>
- <!-- Footer -->
+
+  <!-- Footer -->
   <footer>
     <div class="footer-grid">
       <div>
-        <h4>Contact</h4>
+        <h4 class="lang en">Contact</h4>
+        <h4 class="lang es">Contacto</h4>
         <p>📍 Chicago, IL</p>
         <p>📞 (773) 457-0928</p>
         <p>📧 guerraprinting@gmail.com</p>
-        <p><strong>Business Hours:</strong><br>Mon–Fri: 10am–6pm<br>Sat: 10am–3pm<br>Sun: 11am–3pm</p>
+        <p class="lang en"><strong>Business Hours:</strong><br>Mon–Fri: 10:00am–6:00pm<br>Sat: 10:00am–3:00pm<br>Sun: 11:00am–3:00pm</p>
+        <p class="lang es"><strong>Horario:</strong><br>Lun–Vie: 10:00am–6:00pm<br>Sáb: 10:00am–3:00pm<br>Dom: 11:00am–3:00pm</p>
       </div>
       <div>
-        <h4>Follow Us</h4>
+        <h4 class="lang en">Follow Us</h4>
+        <h4 class="lang es">Síguenos</h4>
         <a href="https://www.instagram.com/guerra_printing/" target="_blank">Instagram</a>
         <a href="https://www.tiktok.com/@guerraprinting1" target="_blank">TikTok</a>
       </div>
       <div>
-        <h4>Quick Links</h4>
-        <a href="services.html">Services</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact</a>
+        <h4 class="lang en">Quick Links</h4>
+        <h4 class="lang es">Enlaces Rápidos</h4>
+        <a href="services.html" class="lang en">Services</a>
+        <a href="services.html" class="lang es">Servicios</a>
+        <a href="about.html" class="lang en">About Us</a>
+        <a href="about.html" class="lang es">Sobre Nosotros</a>
+        <a href="contact.html" class="lang en">Contact</a>
+        <a href="contact.html" class="lang es">Contacto</a>
       </div>
     </div>
-    <p class="copyright">© 2025 Guerra Printing. All rights reserved.</p>
+    <div class="lang-toggle bottom">
+      <button onclick="setLanguage('en')">EN</button>
+      <button onclick="setLanguage('es')">ES</button>
+    </div>
+    <p>© 2025 Guerra Printing. All rights reserved.</p>
   </footer>
+
+  <!-- Language Script -->
+  <script>
+    function setLanguage(lang) {
+      document.querySelectorAll('.lang').forEach(el => el.style.display = 'none');
+      document.querySelectorAll('.' + lang).forEach(el => el.style.display = 'inline');
+    }
+    setLanguage('en');
+  </script>
+
 </body>
 </html>
