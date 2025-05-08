@@ -3,16 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Guerra Printing | Services</title>
+  <title>Our Services | Guerra Printing</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body class="fade-in">
-
-  <!-- Language Toggle -->
-  <div class="lang-toggle">
-    <button onclick="setLanguage('en')">English</button>
-    <button onclick="setLanguage('es')">Español</button>
-  </div>
 
   <!-- Header -->
   <header>
@@ -25,90 +19,137 @@
         <li class="dropdown">
           <a href="services.html" class="lang en">Services</a><a href="services.html" class="lang es">Servicios</a>
           <div class="dropdown-content">
-            <a href="#apparel">Apparel</a>
-            <a href="#paper">Paper Products</a>
-            <a href="#signs">Signage</a>
-            <a href="#specialty">Specialty Items</a>
+            <a href="#apparel" class="lang en">Apparel</a>
+            <a href="#apparel" class="lang es">Ropa</a>
+            <a href="#paper" class="lang en">Paper Products</a>
+            <a href="#paper" class="lang es">Productos de Papel</a>
+            <a href="#signs" class="lang en">Signage</a>
+            <a href="#signs" class="lang es">Letreros</a>
+            <a href="#specialty" class="lang en">Specialty Items</a>
+            <a href="#specialty" class="lang es">Artículos Especiales</a>
           </div>
         </li>
         <li><a href="about.html" class="lang en">About</a><a href="about.html" class="lang es">Nosotros</a></li>
         <li><a href="contact.html" class="lang en">Contact</a><a href="contact.html" class="lang es">Contacto</a></li>
       </ul>
     </nav>
+    <div class="lang-toggle top">
+      <button onclick="setLanguage('en')">EN</button>
+      <button onclick="setLanguage('es')">ES</button>
+    </div>
   </header>
 
-  <!-- Main Services Section -->
-  <section class="services-overview">
-    <h1 class="lang en">Our Services</h1>
-    <h1 class="lang es">Nuestros Servicios</h1>
-    <p class="lang en">From business essentials to custom apparel and signs — we offer scalable printing solutions for every need.</p>
-    <p class="lang es">Desde materiales de oficina hasta ropa personalizada y señalización — ofrecemos soluciones de impresión para cada necesidad.</p>
-  </section>
+  <!-- Services Section -->
+  <main class="services-page">
 
-  <!-- Services Grid -->
-  <section class="services-grid">
+    <!-- Apparel Section -->
+    <section id="apparel" class="service-block">
+      <img src="Apparel.jpeg" alt="Custom Apparel">
+      <div class="text">
+        <h2 class="lang en">Apparel & Uniforms</h2>
+        <h2 class="lang es">Ropa y Uniformes</h2>
+        <p class="lang en">Quality threads, precision stitching — your brand deserves to be worn with pride.</p>
+        <p class="lang es">Ropa con calidad y precisión — tu marca merece ser vestida con orgullo.</p>
+        <ul>
+          <li>T-Shirts (Vinyl, Screen Print, Embroidery)</li>
+          <li>Hoodies</li>
+          <li>Caps & Beanies</li>
+          <li>Uniform Sets</li>
+          <li>Team Gear</li>
+        </ul>
+      </div>
+    </section>
 
-    <!-- Apparel -->
-    <div id="apparel" class="service-item">
-      <img src="Apparel.jpeg" alt="Apparel Printing" />
-      <h3 class="lang en">Apparel Printing</h3>
-      <h3 class="lang es">Impresión en Ropa</h3>
-      <p class="lang en">T-shirts, uniforms, hoodies and more — screen printing, embroidery, and vinyl options available.</p>
-      <p class="lang es">Camisetas, uniformes, sudaderas y más — serigrafía, bordado y vinil disponibles.</p>
-    </div>
+    <!-- Paper Products Section -->
+    <section id="paper" class="service-block">
+      <img src="paperproduct.jpg" alt="Paper Printing">
+      <div class="text">
+        <h2 class="lang en">Paper Products</h2>
+        <h2 class="lang es">Productos de Papel</h2>
+        <p class="lang en">Sharp designs, crisp prints — materials that speak for your business.</p>
+        <p class="lang es">Diseños nítidos e impresiones claras — materiales que hablan por tu negocio.</p>
+        <ul>
+          <li>Flyers</li>
+          <li>Menus</li>
+          <li>Invoices</li>
+          <li>Brochures</li>
+          <li>Business Cards</li>
+        </ul>
+      </div>
+    </section>
 
-    <!-- Paper Products -->
-    <div id="paper" class="service-item">
-      <img src="img/paper.jpg" alt="Paper Products" />
-      <h3 class="lang en">Paper Materials</h3>
-      <h3 class="lang es">Material de Papel</h3>
-      <p class="lang en">Flyers, menus, invoices, brochures, postcards — everything your business needs to market and operate.</p>
-      <p class="lang es">Volantes, menús, facturas, folletos, postales — todo lo que tu negocio necesita para promocionarse y operar.</p>
-    </div>
+    <!-- Signage Section -->
+    <section id="signs" class="service-block">
+      <img src="Signage.jpeg" alt="Signage and Wraps">
+      <div class="text">
+        <h2 class="lang en">Signs & Displays</h2>
+        <h2 class="lang es">Letreros y Exhibiciones</h2>
+        <p class="lang en">Bold prints, built to last — made to stop traffic and turn heads.</p>
+        <p class="lang es">Impresiones llamativas y duraderas — diseñadas para captar miradas.</p>
+        <ul>
+          <li>Banners (Vinyl, Mesh)</li>
+          <li>Storefront Graphics</li>
+          <li>Yard Signs</li>
+          <li>Vehicle Wraps</li>
+          <li>Window Perf</li>
+        </ul>
+      </div>
+    </section>
 
-    <!-- Signage -->
-    <div id="signs" class="service-item">
-      <img src="Signage.jpeg" alt="Signage and Wraps" />
-      <h3 class="lang en">Signage & Displays</h3>
-      <h3 class="lang es">Señalización y Exhibiciones</h3>
-      <p class="lang en">Banners, yard signs, storefront vinyl, window perf, vehicle wraps and more to get you noticed.</p>
-      <p class="lang es">Banners, rótulos, viniles para escaparates, perforado de ventanas, envolturas de vehículos y más para destacar tu negocio.</p>
-    </div>
+    <!-- Specialty Items Section -->
+    <section id="specialty" class="service-block">
+      <img src="img/specialty.jpg" alt="Specialty Items">
+      <div class="text">
+        <h2 class="lang en">Specialty Items</h2>
+        <h2 class="lang es">Artículos Especiales</h2>
+        <p class="lang en">Custom-crafted promo items that make your message stick — literally.</p>
+        <p class="lang es">Artículos promocionales hechos a medida que dejan una impresión duradera.</p>
+        <ul>
+          <li>Stickers</li>
+          <li>Mugs & Drinkware</li>
+          <li>Event Giveaways</li>
+          <li>Sublimation Prints</li>
+          <li>Branded Merchandise</li>
+        </ul>
+      </div>
+    </section>
 
-    <!-- Specialty Items -->
-    <div id="specialty" class="service-item">
-      <img src="img/specialty.jpg" alt="Specialty Items" />
-      <h3 class="lang en">Specialty Items</h3>
-      <h3 class="lang es">Artículos Especiales</h3>
-      <p class="lang en">Stickers, magnets, mugs, tote bags, hats and more — great for giveaways, branding, and merch.</p>
-      <p class="lang es">Stickers, imanes, tazas, bolsas, gorras y más — perfectos para promociones, marca y mercancía.</p>
-    </div>
-
-  </section>
+  </main>
 
   <!-- Footer -->
   <footer>
     <div class="footer-grid">
       <div>
-        <h4>Contact</h4>
+        <h4 class="lang en">Contact</h4>
+        <h4 class="lang es">Contacto</h4>
         <p>📍 Chicago, IL</p>
         <p>📞 (773) 457-0928</p>
         <p>📧 guerraprinting@gmail.com</p>
-        <p><strong>Business Hours:</strong><br />Mon–Fri: 10am–6pm<br />Sat: 10am–3pm<br />Sun: 11am–3pm</p>
+        <p class="lang en"><strong>Business Hours:</strong><br>Mon–Fri: 10:00am–6:00pm<br>Sat: 10:00am–3:00pm<br>Sun: 11:00am–3:00pm</p>
+        <p class="lang es"><strong>Horario:</strong><br>Lun–Vie: 10:00am–6:00pm<br>Sáb: 10:00am–3:00pm<br>Dom: 11:00am–3:00pm</p>
       </div>
       <div>
-        <h4>Follow Us</h4>
-        <a href="https://www.instagram.com/guerra_printing/" target="_blank">Instagram</a>
-        <a href="https://www.tiktok.com/@guerraprinting1" target="_blank">TikTok</a>
+        <h4 class="lang en">Follow Us</h4>
+        <h4 class="lang es">Síguenos</h4>
+        <a href="https://www.instagram.com/guerra_printing/" target="_blank"><img src="icons/instagram.png" alt="Instagram" /> Instagram</a>
+        <a href="https://www.tiktok.com/@guerraprinting1" target="_blank"><img src="icons/tiktok.png" alt="TikTok" /> TikTok</a>
       </div>
       <div>
-        <h4>Quick Links</h4>
-        <a href="services.html">Services</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact</a>
+        <h4 class="lang en">Quick Links</h4>
+        <h4 class="lang es">Enlaces Rápidos</h4>
+        <a href="services.html" class="lang en">Services</a>
+        <a href="services.html" class="lang es">Servicios</a>
+        <a href="about.html" class="lang en">About Us</a>
+        <a href="about.html" class="lang es">Sobre Nosotros</a>
+        <a href="contact.html" class="lang en">Contact</a>
+        <a href="contact.html" class="lang es">Contacto</a>
       </div>
     </div>
-    <p class="copyright">© 2025 Guerra Printing. All rights reserved.</p>
+    <div class="lang-toggle bottom">
+      <button onclick="setLanguage('en')">EN</button>
+      <button onclick="setLanguage('es')">ES</button>
+    </div>
+    <p>© 2025 Guerra Printing. All rights reserved.</p>
   </footer>
 
   <!-- Language Toggle Script -->
