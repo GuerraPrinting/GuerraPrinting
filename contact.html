@@ -15,9 +15,13 @@
     </div>
     <nav>
       <ul>
-        <li><a href="index.html" class="lang en">Home</a><a href="index.html" class="lang es">Inicio</a></li>
+        <li>
+          <a href="index.html" class="lang en">Home</a>
+          <a href="index.html" class="lang es">Inicio</a>
+        </li>
         <li class="dropdown">
-          <a href="services.html" class="lang en">Services</a><a href="services.html" class="lang es">Servicios</a>
+          <a href="services.html" class="lang en">Services</a>
+          <a href="services.html" class="lang es">Servicios</a>
           <div class="dropdown-content">
             <a href="services.html#apparel" class="lang en">Apparel</a>
             <a href="services.html#apparel" class="lang es">Ropa</a>
@@ -29,8 +33,14 @@
             <a href="services.html#specialty" class="lang es">Artículos Especiales</a>
           </div>
         </li>
-        <li><a href="about.html" class="lang en">About</a><a href="about.html" class="lang es">Nosotros</a></li>
-        <li><a href="contact.html" class="lang en">Contact</a><a href="contact.html" class="lang es">Contacto</a></li>
+        <li>
+          <a href="about.html" class="lang en">About</a>
+          <a href="about.html" class="lang es">Nosotros</a>
+        </li>
+        <li>
+          <a href="contact.html" class="lang en">Contact</a>
+          <a href="contact.html" class="lang es">Contacto</a>
+        </li>
       </ul>
     </nav>
     <div class="lang-toggle top">
@@ -38,7 +48,6 @@
       <button onclick="setLanguage('es')">ES</button>
     </div>
   </header>
-
 
   <!-- Get in Touch -->
   <section class="about-section">
@@ -98,7 +107,7 @@
     <h2 class="lang es">✉️ Envíanos un Mensaje</h2>
     <p class="section-caption lang en">Fill out the form below and we'll get back to you shortly. You can also email us directly at <strong>guerraprinting@gmail.com</strong>.</p>
     <p class="section-caption lang es">Completa el formulario y te responderemos pronto. También puedes escribirnos directamente a <strong>guerraprinting@gmail.com</strong>.</p>
-    <form action="https://formspree.io/f/guerraprinting@gmail.com" method="POST" style="max-width: 600px; margin: auto;">
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" style="max-width: 600px; margin: auto;">
       <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;">
       <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;">
       <textarea name="message" placeholder="Your Message" rows="5" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;"></textarea>
@@ -145,10 +154,18 @@
     <p>© 2025 Guerra Printing. All rights reserved.</p>
   </footer>
 
+  <!-- Language Script (Fixes Display Issue) -->
   <script>
     function setLanguage(lang) {
       document.querySelectorAll('.lang').forEach(el => el.style.display = 'none');
-      document.querySelectorAll('.' + lang).forEach(el => el.style.display = 'inline');
+      document.querySelectorAll('.' + lang).forEach(el => {
+        const tag = el.tagName;
+        if (tag === 'P' || tag === 'H2' || tag === 'DIV' || tag === 'SECTION') {
+          el.style.display = 'block';
+        } else {
+          el.style.display = 'inline';
+        }
+      });
     }
     setLanguage('en');
   </script>
