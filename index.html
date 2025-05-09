@@ -168,26 +168,28 @@
     <p>&copy; 2025 Guerra Printing. All rights reserved.</p>
   </footer>
 
-  <!-- JS -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      document.body.classList.add("fade-in");
-      const slides = document.querySelectorAll(".slide-img");
-      let current = 0;
-      setInterval(() => {
-        slides[current].style.opacity = 0;
-        current = (current + 1) % slides.length;
-        slides[current].style.opacity = 1;
-      }, 4000);
-    });
+ <!-- JS -->
+<script>
+  function setLanguage(lang) {
+    const all = document.querySelectorAll(".lang");
+    all.forEach(el => el.style.display = "none");
+    const selected = document.querySelectorAll(`.lang-${lang}`);
+    selected.forEach(el => el.style.display = "block");
+  }
 
-    function setLanguage(lang) {
-      const all = document.querySelectorAll(".lang");
-      all.forEach(el => el.style.display = "none");
-      const selected = document.querySelectorAll(`.lang-${lang}`);
-      selected.forEach(el => el.style.display = "block");
-    }
-  </script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.body.classList.add("fade-in");
+    setLanguage('en'); // ✅ Set English immediately on page load
+
+    const slides = document.querySelectorAll(".slide-img");
+    let current = 0;
+    setInterval(() => {
+      slides[current].style.opacity = 0;
+      current = (current + 1) % slides.length;
+      slides[current].style.opacity = 1;
+    }, 4000);
+  });
+</script>
 
 </body>
 </html>
