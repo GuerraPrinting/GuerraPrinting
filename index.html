@@ -33,19 +33,26 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero Section with Slideshow -->
   <section class="hero">
+    <img src="hero1.jpeg" class="slide-img" style="opacity:1;">
+    <img src="hero2.jpeg" class="slide-img">
+    <img src="hero3.jpeg" class="slide-img">
     <div class="hero-overlay">
-      <h1>Printing That Scales You</h1>
-      <p>Custom apparel, paper goods, and signage for your brand</p>
-      <a href="services.html" class="btn">View Services</a>
+      <div class="hero-text-wrapper">
+        <h1>Printing That Scales You</h1>
+        <p>Custom apparel, paper goods, and signage for your brand</p>
+        <div class="hero-buttons">
+          <a href="services.html" class="btn">View Services</a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- What We Print (Redesigned Horizontal Sections) -->
+  <!-- What We Print (Horizontal Sections) -->
   <section class="service-highlight">
     <div class="service-box">
-      <img src="img/apparel.jpg" alt="Embroidery Needle" class="service-img">
+      <img src="Apparel.jpeg" alt="Embroidery Needle" class="service-img">
       <div class="service-text">
         <h2>Apparel & Uniforms</h2>
         <p>Embroidery, screen print, and heat vinyl crafted for uniforms, tees, and more.</p>
@@ -54,7 +61,7 @@
     </div>
 
     <div class="service-box reverse">
-      <img src="img/paper.jpg" alt="Paper Goods" class="service-img">
+      <img src="paperproduct.jpg" alt="Paper Goods" class="service-img">
       <div class="service-text">
         <h2>Paper Goods</h2>
         <p>Business cards, flyers, brochures – premium paper products done right.</p>
@@ -63,7 +70,7 @@
     </div>
 
     <div class="service-box">
-      <img src="img/vinyl.jpg" alt="Vinyl Signage" class="service-img">
+      <img src="Signage.jpeg" alt="Vinyl Signage" class="service-img">
       <div class="service-text">
         <h2>Vinyl & Signs</h2>
         <p>Custom signage, banners, and decals – bold prints for any surface.</p>
@@ -97,6 +104,22 @@
       <p>&copy; 2025 Guerra Printing. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- JS for Fade-In and Slideshow -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add("fade-in");
+
+      const slides = document.querySelectorAll(".slide-img");
+      let current = 0;
+
+      setInterval(() => {
+        slides[current].style.opacity = 0;
+        current = (current + 1) % slides.length;
+        slides[current].style.opacity = 1;
+      }, 4000);
+    });
+  </script>
 
 </body>
 </html>
