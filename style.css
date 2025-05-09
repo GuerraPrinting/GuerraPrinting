@@ -123,7 +123,6 @@ nav a:hover {
   background: #e0e0e0;
 }
 
-/* Only hide language content by default */
 .lang {
   display: none;
 }
@@ -229,7 +228,6 @@ nav a:hover {
   line-height: 1.6;
 }
 
-/* Buttons (e.g., social or form) */
 .about-buttons {
   display: flex;
   justify-content: center;
@@ -288,17 +286,58 @@ nav a:hover {
   margin-bottom: 1rem;
 }
 
-/* === List Reset === */
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* === Homepage Horizontal Services Section === */
+.service-highlight {
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
-.about-section ul li {
-  text-align: center;
-  font-weight: 500;
+.service-box {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.service-box.reverse {
+  flex-direction: row-reverse;
+}
+
+.service-img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.service-text {
+  max-width: 500px;
+}
+
+.service-text h2 {
+  font-size: 1.8rem;
   margin-bottom: 0.5rem;
+}
+
+.service-text p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.service-text .btn {
+  padding: 0.6rem 1.2rem;
+  background-color: #111;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.service-text .btn:hover {
+  background-color: #333;
 }
 
 /* === Footer === */
@@ -309,43 +348,42 @@ footer {
   font-size: 0.95rem;
 }
 
-.footer-grid {
+.footer-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  text-align: center;
-  gap: 3rem;
+  text-align: left;
+  gap: 2rem;
 }
 
-.footer-grid div {
+.footer-section {
   min-width: 200px;
   max-width: 300px;
   flex: 1;
 }
 
-footer a {
-  color: #ccc;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  margin: 0.4rem 0;
-  transition: color 0.3s;
-  justify-content: center;
+.footer-section h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
 }
 
-footer a:hover {
+.footer-section a {
+  color: #ccc;
+  text-decoration: none;
+  display: block;
+  margin: 0.4rem 0;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
   color: #fff;
 }
 
-footer a img {
-  width: 20px;
-  height: 20px;
-  margin-right: 0.5rem;
-}
-
-footer p {
-  margin-top: 2rem;
+.footer-bottom {
   text-align: center;
+  margin-top: 2rem;
+  border-top: 1px solid #444;
+  padding-top: 1rem;
   font-size: 0.9rem;
 }
 
@@ -378,31 +416,24 @@ footer p {
     font-size: 1rem;
   }
 
-  .footer-grid {
+  .footer-wrapper {
     flex-direction: column;
     text-align: center;
   }
 
-  footer a {
-    justify-content: center;
-  }
-
-  .lang-toggle.top {
-    justify-content: center;
-    width: 100%;
-    padding-top: 1rem;
-  }
-
-  .lang-toggle.bottom {
+  .service-box,
+  .service-box.reverse {
     flex-direction: column;
-    gap: 0.5rem;
   }
 
   .about-buttons {
     flex-direction: column;
   }
 
-  .service-block {
-    padding: 0 1rem;
+  .lang-toggle.top,
+  .lang-toggle.bottom {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
 }
