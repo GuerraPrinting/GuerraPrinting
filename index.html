@@ -18,19 +18,29 @@
     </div>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a class="lang lang-en" href="index.html">Home</a><a class="lang lang-es" href="index.html">Inicio</a></li>
         <li class="dropdown">
-          <a href="services.html">Services</a>
+          <a class="lang lang-en" href="services.html">Services</a>
+          <a class="lang lang-es" href="services.html">Servicios</a>
           <div class="dropdown-content">
-            <a href="services.html#apparel">Apparel</a>
-            <a href="services.html#paper">Paper</a>
-            <a href="services.html#signage">Signage</a>
+            <a class="lang lang-en" href="services.html#apparel">Apparel</a>
+            <a class="lang lang-es" href="services.html#apparel">Ropa</a>
+            <a class="lang lang-en" href="services.html#paper">Paper</a>
+            <a class="lang lang-es" href="services.html#paper">Papelería</a>
+            <a class="lang lang-en" href="services.html#signage">Signage</a>
+            <a class="lang lang-es" href="services.html#signage">Señalización</a>
+            <a class="lang lang-en" href="services.html#specialty">Specialty</a>
+            <a class="lang lang-es" href="services.html#specialty">Especiales</a>
           </div>
         </li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a class="lang lang-en" href="about.html">About</a><a class="lang lang-es" href="about.html">Nosotros</a></li>
+        <li><a class="lang lang-en" href="contact.html">Contact</a><a class="lang lang-es" href="contact.html">Contacto</a></li>
       </ul>
     </nav>
+    <div class="lang-toggle top">
+      <button onclick="setLanguage('en')">EN</button>
+      <button onclick="setLanguage('es')">ES</button>
+    </div>
   </header>
 
   <!-- Hero Section with Slideshow -->
@@ -40,85 +50,143 @@
     <img src="hero3.jpeg" class="slide-img">
     <div class="hero-overlay">
       <div class="hero-text-wrapper">
-        <h1>Printing That Scales You</h1>
-        <p>Custom apparel, paper goods, and signage for your brand</p>
+        <h1 class="lang lang-en">Printing That Scales You</h1>
+        <h1 class="lang lang-es">Impresión que eleva tu marca</h1>
+        <p class="lang lang-en">Custom apparel, paper goods, and signage for your brand</p>
+        <p class="lang lang-es">Ropa personalizada, productos de papelería y señalización para tu negocio</p>
         <div class="hero-buttons">
-          <a href="services.html" class="btn">View Services</a>
+          <a href="services.html" class="btn lang lang-en">View Services</a>
+          <a href="services.html" class="btn lang lang-es">Ver Servicios</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- What We Print (Horizontal Sections) -->
-  <section class="service-highlight">
-    <div class="service-box">
-      <img src="Apparel.jpeg" alt="Embroidery Needle" class="service-img">
-      <div class="service-text">
-        <h2>Apparel & Uniforms</h2>
-        <p>Embroidery, screen print, and heat vinyl crafted for uniforms, tees, and more.</p>
-        <a href="services.html#apparel" class="btn">Explore Apparel</a>
-      </div>
+  <!-- What We Print Section - Translated -->
+<section class="service-highlight">
+  <div class="service-box">
+    <img src="Apparel.jpeg" alt="Embroidery Needle" class="service-img">
+    <div class="service-text">
+      <h2 class="lang lang-en">Apparel & Uniforms</h2>
+      <h2 class="lang lang-es">Ropa y Uniformes</h2>
+      <p class="lang lang-en">
+        We specialize in high-quality custom embroidery, screen printing, and heat vinyl application for t-shirts,
+        hoodies, work uniforms, and team apparel. Whether you're outfitting a local sports team or branding your
+        business, we deliver durable, vibrant results that stand out and last.
+      </p>
+      <p class="lang lang-es">
+        Nos especializamos en bordados personalizados de alta calidad, serigrafía e impresión térmica en camisetas,
+        sudaderas, uniformes de trabajo y ropa para equipos. Ya sea que estés vistiendo un equipo deportivo local o
+        promocionando tu negocio, entregamos resultados duraderos y vibrantes que destacan y perduran.
+      </p>
+      <a href="services.html#apparel" class="btn lang lang-en">Explore Apparel</a>
+      <a href="services.html#apparel" class="btn lang lang-es">Ver Ropa</a>
     </div>
+  </div>
 
-    <div class="service-box reverse">
-      <img src="paperproduct.jpg" alt="Paper Goods" class="service-img">
-      <div class="service-text">
-        <h2>Paper Goods</h2>
-        <p>Business cards, flyers, brochures – premium paper products done right.</p>
-        <a href="services.html#paper" class="btn">See Paper Products</a>
-      </div>
+  <div class="service-box reverse">
+    <img src="paperproduct.jpg" alt="Paper Goods" class="service-img">
+    <div class="service-text">
+      <h2 class="lang lang-en">Paper Goods</h2>
+      <h2 class="lang lang-es">Papelería</h2>
+      <p class="lang lang-en">
+        Our print shop produces premium paper products such as business cards, menus, flyers, brochures, and invoice
+        pads. From design to finish, we ensure sharp visuals and crisp cuts that help you leave a professional
+        impression on every customer and client.
+      </p>
+      <p class="lang lang-es">
+        Nuestra imprenta produce productos de papelería premium como tarjetas de presentación, menús, volantes,
+        folletos y talonarios de facturas. Desde el diseño hasta el acabado, garantizamos imágenes nítidas y cortes
+        precisos que te ayudarán a causar una impresión profesional en cada cliente.
+      </p>
+      <a href="services.html#paper" class="btn lang lang-en">See Paper Products</a>
+      <a href="services.html#paper" class="btn lang lang-es">Ver Papelería</a>
     </div>
+  </div>
 
-    <div class="service-box">
-      <img src="Signage.jpeg" alt="Vinyl Signage" class="service-img">
-      <div class="service-text">
-        <h2>Vinyl & Signs</h2>
-        <p>Custom signage, banners, and decals – bold prints for any surface.</p>
-        <a href="services.html#signage" class="btn">View Signage</a>
-      </div>
+  <div class="service-box">
+    <img src="Signage.jpeg" alt="Vinyl Signage" class="service-img">
+    <div class="service-text">
+      <h2 class="lang lang-en">Vinyl & Signs</h2>
+      <h2 class="lang lang-es">Vinilo y Señalización</h2>
+      <p class="lang lang-en">
+        From storefront signage to custom vinyl decals and vehicle wraps, our signage services offer bold,
+        high-visibility solutions for businesses, events, and promotions. We work with a variety of surfaces to help
+        you get noticed both indoors and outdoors.
+      </p>
+      <p class="lang lang-es">
+        Desde señalización para escaparates hasta calcomanías de vinilo personalizadas y rotulación de vehículos,
+        nuestros servicios de señalización ofrecen soluciones audaces y de alta visibilidad para negocios, eventos y
+        promociones. Trabajamos con una variedad de superficies para ayudarte a destacar tanto en interiores como en
+        exteriores.
+      </p>
+      <a href="services.html#signage" class="btn lang lang-en">View Signage</a>
+      <a href="services.html#signage" class="btn lang lang-es">Ver Señalización</a>
     </div>
+  </div>
+</section>
+
+  <!-- Trusted By Section -->
+  <section class="about-section">
+    <h2 class="lang lang-en">Trusted by Local Brands & Events</h2>
+    <h2 class="lang lang-es">Con la confianza de marcas y eventos locales</h2>
+    <span class="section-caption">
+      Startups • Restaurants • Schools • Contractors • Barbers • Artists • Churches • Festivals • Corporate Teams
+    </span>
   </section>
 
   <!-- Footer -->
   <footer>
-    <div class="footer-wrapper">
-      <div class="footer-section">
-        <h4>Guerra Printing</h4>
-        <p>High-quality custom printing services for your business and personal needs.</p>
+    <div class="footer-grid" style="text-align:center; justify-content: center;">
+      <div>
+        <h4 class="lang lang-en">Guerra Printing</h4>
+        <h4 class="lang lang-es">Guerra Printing</h4>
+        <p class="lang lang-en">High-quality custom printing services for your business and personal needs.</p>
+        <p class="lang lang-es">Servicios de impresión personalizados de alta calidad para sus necesidades comerciales y personales.</p>
       </div>
-      <div class="footer-section">
-        <h4>Business Hours</h4>
+      <div>
+        <h4 class="lang lang-en">Business Hours</h4>
+        <h4 class="lang lang-es">Horario Comercial</h4>
         <p>Mon–Fri: 10:00am–6:00pm<br>Sat: 10:00am–3:00pm<br>Sun: 11:00am–3:00pm</p>
       </div>
-      <div class="footer-section">
-        <h4>Contact</h4>
+      <div>
+        <h4 class="lang lang-en">Contact</h4>
+        <h4 class="lang lang-es">Contacto</h4>
         <p>Email: guerraprinting@gmail.com<br>Phone: (773) 457-0928</p>
       </div>
-      <div class="footer-section">
-        <h4>Follow Us</h4>
+      <div>
+        <h4 class="lang lang-en">Follow Us</h4>
+        <h4 class="lang lang-es">Síguenos</h4>
         <a href="https://instagram.com" target="_blank">Instagram</a><br>
         <a href="https://tiktok.com" target="_blank">TikTok</a>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 Guerra Printing. All rights reserved.</p>
+    <div class="lang-toggle bottom">
+      <button onclick="setLanguage('en')">EN</button>
+      <button onclick="setLanguage('es')">ES</button>
     </div>
+    <p>&copy; 2025 Guerra Printing. All rights reserved.</p>
   </footer>
 
-  <!-- JS for Fade-In and Slideshow -->
+  <!-- JS -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       document.body.classList.add("fade-in");
-
       const slides = document.querySelectorAll(".slide-img");
       let current = 0;
-
       setInterval(() => {
         slides[current].style.opacity = 0;
         current = (current + 1) % slides.length;
         slides[current].style.opacity = 1;
       }, 4000);
     });
+
+    function setLanguage(lang) {
+      const all = document.querySelectorAll(".lang");
+      all.forEach(el => el.style.display = "none");
+      const selected = document.querySelectorAll(`.lang-${lang}`);
+      selected.forEach(el => el.style.display = "block");
+    }
   </script>
 
 </body>
