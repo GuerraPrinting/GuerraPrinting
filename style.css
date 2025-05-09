@@ -11,199 +11,135 @@ body {
   color: #222;
   line-height: 1.6;
   transition: opacity 1s ease-in;
-  opacity: 0;
+  opacity: 1;
 }
 
 body.fade-in {
   opacity: 1;
 }
 
-/* === Header === */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #111;
-  padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.logo {
-  flex: 1;
-}
-
-.logo img {
-  height: 60px;
-}
-
-nav {
-  flex: 2;
-  display: flex;
-  justify-content: center;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 1rem;
-}
-
-nav li {
-  position: relative;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  padding: 0.5rem 0.8rem;
-  transition: background 0.3s, color 0.3s;
-  border-radius: 4px;
-}
-
-nav a:hover {
-  background: #333;
-}
-
-/* === Dropdown === */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #222;
-  flex-direction: column;
-  min-width: 180px;
-  z-index: 999;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-.dropdown-content a {
-  padding: 0.5rem 1rem;
-  color: #fff;
-  white-space: nowrap;
-}
-
-.dropdown:hover .dropdown-content {
-  display: flex;
-}
-
-/* === Language Toggle === */
-.lang-toggle.top {
-  margin-left: auto;
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-  padding-left: 1rem;
-}
-
-.lang-toggle.bottom {
-  margin-top: 2rem;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.lang-toggle button {
-  background: #fff;
-  color: #111;
-  padding: 0.4rem 1rem;
-  border: none;
-  border-radius: 4px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.lang-toggle button:hover {
-  background: #e0e0e0;
-}
-
 .lang {
   display: none;
 }
-
-/* === Hero Section === */
-.hero {
-  position: relative;
-  height: 85vh;
-  overflow: hidden;
+.lang-en {
+  display: block;
 }
 
-.slide-img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
+/* === Footer Fixes === */
+footer {
+  background: #111;
+  color: #eee;
+  padding: 3rem 2rem;
+  font-size: 0.95rem;
+  text-align: center;
 }
 
-.hero-overlay {
-  position: relative;
-  z-index: 1;
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  height: 100%;
+.footer-grid {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-  padding: 2rem;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.hero-text-wrapper {
-  max-width: 700px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
+.footer-grid div {
+  min-width: 200px;
+  max-width: 300px;
+  flex: 1;
 }
 
-.hero-text-wrapper h1 {
-  font-size: 2.6rem;
-  font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-}
-
-.hero-text-wrapper p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  max-width: 650px;
-  margin: 1rem auto 0;
-  color: #f0f0f0;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
-}
-
-.hero-buttons {
-  margin-top: 1.2rem;
-}
-
-.hero .btn {
+footer a {
+  background-color: #333;
+  color: #ccc;
+  text-decoration: none;
   display: inline-block;
-  margin: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  background-color: #ff4c4c;
-  color: white;
-  border: none;
-  border-radius: 6px;
+  margin: 0.4rem 0.3rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+footer a:hover {
+  background: #555;
+  color: #fff;
+}
+
+footer p {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.lang-toggle.bottom {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* === Services Page Section === */
+.services-page {
+  padding: 3rem 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.service-block {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-block.reverse {
+  flex-direction: row-reverse;
+}
+
+.service-block img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.service-block .text {
+  flex: 1;
+  max-width: 500px;
+  text-align: left;
+}
+
+.service-block .text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.service-block .text p {
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.service-block .btn {
+  background: #111;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
   font-weight: bold;
   text-decoration: none;
-  transition: background 0.3s ease;
+  display: inline-block;
+  transition: background 0.3s;
 }
 
-.hero .btn:hover {
-  background-color: #e03b3b;
+.service-block .btn:hover {
+  background: #333;
 }
 
-/* === Shared About / Contact Section Styles === */
+/* === Shared About/Contact Layouts === */
 .about-section {
   text-align: center;
   padding: 3rem 2rem;
@@ -212,20 +148,15 @@ nav a:hover {
 }
 
 .about-section h2 {
-  display: block;
-  width: 100%;
   font-size: 2rem;
   font-weight: 800;
   margin-bottom: 1rem;
 }
 
 .section-caption {
-  display: block;
-  width: 100%;
-  margin-bottom: 2rem;
   color: #555;
   font-size: 1.05rem;
-  line-height: 1.6;
+  margin-bottom: 2rem;
 }
 
 .about-buttons {
@@ -252,188 +183,13 @@ nav a:hover {
   background-color: #333;
 }
 
-/* === Services Page Layout === */
-.services-page {
-  padding: 2rem 1rem;
-}
-
-.service-block {
-  margin-bottom: 3rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.service-block img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
-
-.service-block .text {
-  max-width: 700px;
-}
-
-.service-block .text h2 {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-}
-
-.service-block .text p {
-  font-size: 1.05rem;
-  margin-bottom: 1rem;
-}
-
-/* === Homepage Horizontal Services Section === */
-.service-highlight {
-  padding: 3rem 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-}
-
-.service-box {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.service-box.reverse {
-  flex-direction: row-reverse;
-}
-
-.service-img {
-  width: 100%;
-  max-width: 500px;
-  border-radius: 10px;
-}
-
-.service-text {
-  max-width: 500px;
-}
-
-.service-text h2 {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-}
-
-.service-text p {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-
-.service-text .btn {
-  padding: 0.6rem 1.2rem;
-  background-color: #111;
-  color: #fff;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-
-.service-text .btn:hover {
-  background-color: #333;
-}
-
-/* === Footer === */
-footer {
-  background: #111;
-  color: #eee;
-  padding: 3rem 2rem;
-  font-size: 0.95rem;
-}
-
-.footer-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: left;
-  gap: 2rem;
-}
-
-.footer-section {
-  min-width: 200px;
-  max-width: 300px;
-  flex: 1;
-}
-
-.footer-section h4 {
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
-}
-
-.footer-section a {
-  color: #ccc;
-  text-decoration: none;
-  display: block;
-  margin: 0.4rem 0;
-  transition: color 0.3s;
-}
-
-.footer-section a:hover {
-  color: #fff;
-}
-
-.footer-bottom {
-  text-align: center;
-  margin-top: 2rem;
-  border-top: 1px solid #444;
-  padding-top: 1rem;
-  font-size: 0.9rem;
-}
-
-/* === Responsive === */
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav {
-    justify-content: flex-start;
-    width: 100%;
-  }
-
-  nav ul {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .hero {
-    height: 70vh;
-  }
-
-  .hero-text-wrapper h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero-text-wrapper p {
-    font-size: 1rem;
-  }
-
-  .footer-wrapper {
+  .service-block {
     flex-direction: column;
     text-align: center;
   }
 
-  .service-box,
-  .service-box.reverse {
-    flex-direction: column;
-  }
-
-  .about-buttons {
-    flex-direction: column;
-  }
-
-  .lang-toggle.top,
-  .lang-toggle.bottom {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+  .service-block .text {
+    text-align: center;
   }
 }
