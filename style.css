@@ -365,6 +365,7 @@ footer {
   min-width: 200px;
   max-width: 300px;
   flex: 1;
+  text-align: center;
 }
 
 footer a {
@@ -372,10 +373,12 @@ footer a {
   color: #ccc;
   text-decoration: none;
   display: inline-block;
-  margin: 0.4rem 0.3rem;
+  margin: 0.3rem;
   padding: 0.4rem 0.8rem;
   border-radius: 4px;
   transition: background 0.3s;
+  text-align: center;
+  min-width: 100px;
 }
 
 footer a:hover {
