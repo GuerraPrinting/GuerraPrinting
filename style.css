@@ -177,7 +177,7 @@ nav a:hover {
   background-color: #e03b3b;
 }
 
-/* === What We Print Section (Homepage) === */
+/* === Homepage: What We Print === */
 section.service-highlight {
   padding: 3rem 2rem;
   display: flex;
@@ -238,7 +238,7 @@ section.service-highlight {
   background: #333;
 }
 
-/* === Services Page Layout === */
+/* === Services Page === */
 .services-page {
   padding: 3rem 2rem;
   max-width: 1100px;
@@ -298,7 +298,7 @@ section.service-highlight {
   background: #333;
 }
 
-/* === Shared About/Contact Layouts === */
+/* === About & Contact Shared Layout === */
 .about-section {
   text-align: center;
   padding: 3rem 2rem;
@@ -366,6 +366,14 @@ footer {
   max-width: 300px;
   flex: 1;
   text-align: center;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 footer a {
