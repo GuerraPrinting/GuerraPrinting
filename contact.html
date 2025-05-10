@@ -157,10 +157,19 @@
   <!-- Language Script -->
   <script>
     function setLanguage(lang) {
-      document.querySelectorAll('[class^="lang-"]').forEach(el => el.style.display = 'none');
+      // Hide all language-specific elements
+      document.querySelectorAll('[class^="lang"]').forEach(el => {
+        el.style.display = 'none';
+      });
+
+      // Show only selected language
       document.querySelectorAll('.lang-' + lang).forEach(el => {
         const tag = el.tagName;
-        el.style.display = ['P', 'H2', 'DIV', 'H4', 'SECTION'].includes(tag) ? 'block' : 'inline';
+        if (['P', 'H2', 'H4', 'DIV', 'SECTION'].includes(tag)) {
+          el.style.display = 'block';
+        } else {
+          el.style.display = 'inline';
+        }
       });
     }
 
