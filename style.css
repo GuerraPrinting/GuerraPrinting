@@ -68,7 +68,7 @@ nav a {
 }
 
 nav a:hover {
-  background: #333;
+  background: #414141;
 }
 
 .dropdown-content {
@@ -174,7 +174,7 @@ nav a:hover {
 }
 
 .hero .btn:hover {
-  background-color: #e03b3b;
+  background-color: #d63939;
 }
 
 /* === Homepage: What We Print === */
@@ -235,7 +235,7 @@ section.service-highlight {
 }
 
 .service-text .btn:hover {
-  background: #333;
+  background: #ff4c4c;
 }
 
 /* === Services Page === */
@@ -260,14 +260,14 @@ section.service-highlight {
 
 .service-block img {
   width: 100%;
-  max-width: 480px;
+  max-width: 320px;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
-
 .service-block .text {
   flex: 1;
+  min-width: 240px;
   max-width: 500px;
   text-align: left;
 }
@@ -405,6 +405,11 @@ footer p {
   justify-content: center;
   gap: 1rem;
   margin-top: 1.5rem;
+}
+
+.email-indent {
+  display: inline-block;
+  margin-left: 40px; /* Adjust to your preference */
 }
 
 /* === Responsive === */
