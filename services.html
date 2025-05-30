@@ -184,20 +184,32 @@
     <p>&copy; 2025 Guerra Printing. All rights reserved.</p>
   </footer>
 
-  <!-- JS -->
-  <script>
-    function setLanguage(lang) {
-      const all = document.querySelectorAll(".lang");
-      all.forEach(el => el.style.display = "none");
-      const selected = document.querySelectorAll(`.lang-${lang}`);
-      selected.forEach(el => el.style.display = "block");
-    }
+<!-- JS -->
+<script>
+  function setLanguage(lang) {
+    localStorage.setItem("lang", lang);
 
-    document.addEventListener("DOMContentLoaded", () => {
-      document.body.classList.add("fade-in");
-      setLanguage('en');
-    });
-  </script>
+    const all = document.querySelectorAll(".lang");
+    all.forEach(el => el.style.display = "none");
+
+    const selected = document.querySelectorAll(`.lang-${lang}`);
+    selected.forEach(el => el.style.display = "block");
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const lang = localStorage.getItem("lang") || 'en';
+    setLanguage(lang);
+
+    // Slideshow
+    const slides = document.querySelectorAll(".slide-img");
+    let current = 0;
+    setInterval(() => {
+      slides[current].style.opacity = 0;
+      current = (current + 1) % slides.length;
+      slides[current].style.opacity = 1;
+    }, 4000);
+  });
+</script>
 
 </body>
 </html>
