@@ -412,6 +412,27 @@ footer p {
   margin-left: 40px; /* Adjust to your preference */
 }
 
+.service-block video,
+.service-block img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  display: block;
+  margin: auto;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+}
+
+@media (max-width: 800px) {
+  .service-block {
+    flex-direction: column !important;
+    text-align: center;
+  }
+  .service-block .text {
+    margin-top: 1.5rem;
+  }
+}
+
+
 /* === Responsive === */
 @media (max-width: 768px) {
   nav ul {
